@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <title>JS学習ゲーム</title>
+    <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+    <div id="header">JS学習ゲーム</div>
+    <div id="border">
+        <div id="hp3">
+            <div id="HP">HP</div>
+            <div id="hp2">
+                <div id="hp"></div>
+            </div>
+        </div>
+        <img src="monster1.png" alt="monster" class="moving">
+    </div>
+    <div id="all-sentakushi">
+        <p id="mondaibun">問題：正解はどれ？</p>
+        <button id="sentakushi1" class="sentakushi" onclick="answerCheck(0)">A</button>
+        <button id="sentakushi2" class="sentakushi" onclick="answerCheck(1)">B</button>
+        <button id="sentakushi3" class="sentakushi" onclick="answerCheck(2)">C</button>
+        <button id="sentakushi4" class="sentakushi" onclick="answerCheck(3)">D</button>
+    </div>
+    <script src="game.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+html, body{
+    display: flex;
+    justify-content: center;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    font-size: 2vh;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.2);
+}
+
+img{
+    margin: 0;
+    padding:0;
+    width:80%;
+    height: auto;
+    will-change: opacity, transform;
+}
+
+#border{
+    margin:0;
+    padding:0;
+    position: absolute;
+    top:10%;
+    width:80%;
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+    display: flex;               /* 横並び制御 */
+    justify-content: center;     /* 横方向中央揃え */
+    align-items: center;         /* 縦方向揃え（任意） */
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+.moving{
+    animation: moving 2.0s ease-in-out infinite;
+}
+
+.shake{
+    animation: shake 0.2s ease-in-out;
+}
+
+.vanish{
+    animation: vanish 2.0s forwards;
+}
+
+@keyframes moving{
+  0% {
+    opacity:1.0;
+    transform: translateX(-30px); 
+  }
+  25%{
+    opacity:0.5;
+  }
+  50% {
+    opacity:1.0;
+    transform: translateX(30px); 
+  }
+  75%{
+    opacity:0.5;
+  }
+  100% {
+    opacity:1.0;
+    transform: translateX(-30px); 
+  }  
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-10px); }
+  50%  { transform: translateX(10px); }
+  75%  { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes vanish{
+  0% {
+    opacity:1.0;
+    scale: 1.0;
+  }
+
+  100% {
+    opacity:0.0;
+    scale: 0.8;
+  } 
+}
+
+.sentakushi{
+    width:85%;
+    height: 4vh;
+    background-color: rgb(244, 244, 244);
+    border: solid 0.2vh black;
+    border-radius: 10px;
+}
+
+.sentakushi:hover{
+    background-color: antiquewhite;
+}
+
+#all-sentakushi{
+    width:100%;
+    position:absolute;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;
+}
+
+#HP{
+    width: 100%;
+}
+
+#hp{
+    margin: 0;
+    width:100%;
+    background-color: red;
+    padding: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: flex;
+    margin-left: auto;
+
+}
+
+#hp2{
+    margin: 0;
+    width: 100%;
+    background: none;
+    padding: 0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    border:solid 3px rgb(88, 88, 88);
+}
+
+#hp3{
+    width: 90%;
+}
