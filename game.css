@@ -17,6 +17,18 @@ html, body{
     box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.2);
 }
 
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    font-size: 2vh;
+    box-shadow: 0 -0.1vh 0.5vh rgba(0, 0, 0, 0.2);
+}
+
 img{
     margin: 0;
     padding:0;
@@ -45,7 +57,7 @@ img{
 }
 
 .shake{
-    animation: shake 0.2s ease-in-out;
+    animation: shake 0.15s ease-in-out;
 }
 
 .vanish{
@@ -96,9 +108,10 @@ img{
 .sentakushi{
     width:85%;
     height: 4vh;
-    background-color: rgb(244, 244, 244);
-    border: solid 0.2vh black;
+    background-color: rgb(255, 251, 244);
+    border: solid 0.2vh rgb(144, 0, 0);
     border-radius: 10px;
+    color: black;
 }
 
 .sentakushi:hover{
@@ -144,4 +157,31 @@ img{
 
 #hp3{
     width: 90%;
+}
+
+p{
+    line-height: 3;
+}
+
+#commentary{
+    border: 2px double blue;
+    border-radius: 10px;
+    width:90%;
+    position:absolute;
+    bottom:5%;
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    gap:10px;
+    padding: 1vh;
+}
+
+#next-button{
+    align-self: center;
+    height: 5vw;
+    width:40%;
+    background: linear-gradient(rgb(66, 116, 225), rgb(203, 216, 255));
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

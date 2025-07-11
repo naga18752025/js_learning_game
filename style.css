@@ -1,0 +1,42 @@
+html, body{
+    display: flex;
+    justify-content: center;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    font-size: 2vh;
+    box-shadow: 0 0.1vh 0.5vh rgba(0, 0, 0, 0.2);
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    font-size: 2vh;
+    box-shadow: 0 -0.1vh 0.5vh rgba(0, 0, 0, 0.2);
+}
+
+#main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: solid 5px black;
+    border-radius: 10px;
+    background-color:rgb(234, 239, 255);
+}
