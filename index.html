@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,41 @@
 <body>
     <div id="header">JS学習ゲーム</div>
     <div id="main">
-        <button id="start-button" onclick="gameStart()">ゲーム開始</button>
+        <button id="course-button" onclick="courseSelectOpen()">コース選択</button>
+        <button id="recommend" onclick="recommendOpen()">JS参考サイト</button>
+        <div id="course-select-all" style="display: none;">
+            <p id="course-select-daimei">コース選択</p>
+            <div id="course-select">
+                <button class="course" onclick="courseLocked(window.sample)">JSの基礎知識</button>
+                <button class="course">DOM操作</button>
+                <button class="course">変数と演算子</button>
+                <button class="course">関数と条件分岐</button>
+                <button class="course">リストとディクショナリ</button>
+                <button class="course">JSの基礎知識</button>
+                <button class="course">DOM操作</button>
+                <button class="course">変数と演算子</button>
+                <button class="course">関数と条件分岐</button>
+                <button class="course">リストとディクショナリ</button>
+                <button class="course">JSの基礎知識</button>
+                <button class="course">DOM操作</button>
+                <button class="course">変数と演算子</button>
+                <button class="course">関数と条件分岐</button>
+                <button class="course">リストとディクショナリ</button>
+                <button class="course">JSの基礎知識</button>
+                <button class="course">DOM操作</button>
+                <button class="course">変数と演算子</button>
+                <button class="course">関数と条件分岐</button>
+                <button class="course">リストとディクショナリ</button>
+                <button class="course"></button>
+            </div>
+            <button id="back" onclick="courseSelectClose()">戻る</button>
+        </div>
+        <div id="sankou-saito" style="display: none;">
+            <a href="https://jsprimer.net/" target="_blank">JavaScript Primer</a>
+        </div>
     </div>
     <div id="footer"></div>
+    <script src="mondai.js" defer></script>
     <script src="script.js" defer></script>
 </body>
 </html>

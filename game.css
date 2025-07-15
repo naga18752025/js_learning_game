@@ -3,7 +3,7 @@ html, body{
     justify-content: center;
     font-family: "M PLUS Rounded 1c", sans-serif;
     height: 100%;
-    background-color: rgb(255, 255, 245);
+    background-color: rgb(250, 254, 255);
 
 }
 
@@ -55,6 +55,16 @@ html, body{
     font-size: 2vh;
     box-shadow: 0 -0.1vh 0.5vh rgba(0, 0, 0, 0.2);
     z-index: 9999;
+}
+
+#not-correct-board{
+    margin:0;
+    padding:0;
+    position: absolute;
+    bottom:90%;
+    width:80%;
+    color: black;
+    font-size: 1.7vh;
 }
 
 img{
@@ -230,6 +240,18 @@ p{
     height: 5vw;
     width:40%;
     background: linear-gradient(rgb(66, 116, 225), rgb(203, 216, 255));
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 2.7vw;
+}
+
+#finish-button{
+    align-self: center;
+    height: 5vw;
+    width:40%;
+    background: linear-gradient(rgb(225, 151, 66), rgb(231, 208, 170));
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);

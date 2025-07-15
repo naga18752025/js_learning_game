@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="header">JS学習ゲーム</div>
+    <div id="not-correct-board">不正解数：<span id="not-correct">0</span></div>
     <div id="border">
         <div id="hp3">
             <div id="HP">HP</div>
@@ -29,6 +30,7 @@
         <div style="align-self: center;">解説</div>
         <p></p>
         <button id="next-button" onclick="nextQuestion()">次へ</button>
+        <button id="finish-button" onclick="finish()" style="display: none;">終了</button>
     </div>
     <div id="footer"></div>
     <script src="game.js" defer></script>
