@@ -111,7 +111,7 @@ button{
 }
 
 .course {
-    background: linear-gradient(135deg, rgb(243, 245, 160), rgb(225, 226, 136));
+    background: linear-gradient(175deg, rgb(243, 245, 160) 40%, rgb(185, 186, 101));
     border: none;
     border-radius: 10px;
     width: 70%;
