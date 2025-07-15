@@ -9,7 +9,7 @@ html, body{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(247, 223, 30);
     display: flex;
     justify-content: center;
     padding: 1vh;
@@ -21,7 +21,7 @@ html, body{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(247, 223, 30);
     display: flex;
     justify-content: center;
     padding: 1vh;
@@ -59,7 +59,7 @@ button{
     border-radius: 10px;
     padding: 0;
     background-color: beige;
-    box-shadow: 0 0 1vh rgb(154, 148, 148);
+    box-shadow: 0 0 1vh rgba(154, 148, 148, 0.5);
     justify-content: center;
     margin: 1vh;
 }
@@ -72,7 +72,7 @@ button{
     border-radius: 10px;
     padding: 0;
     background-color: rgb(220, 234, 245);
-    box-shadow: 0 0 1vh rgb(154, 148, 148);
+    box-shadow: 0 0 0.5vh rgba(154, 148, 148, 0.5);
     justify-content: center;
     margin: 1vh;
 }
@@ -149,7 +149,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 0.5vh rgba(109, 109, 109, 0.5);
+    box-shadow: 0 0 0.5vh rgba(109, 109, 109, 0.3);
     font-family: "M PLUS Rounded 1c", sans-serif;
     margin: 1vh 0;
 }
