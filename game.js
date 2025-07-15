@@ -5,6 +5,11 @@ let monsterNumber = 1;
 let typeOfQuestion = JSON.parse(localStorage.getItem("course"));
 let notCorrect = 0;
 
+if(localStorage.getItem("course") === null){
+    alert("コースを選択してください");
+    window.location.href = "index.html";
+}
+
 function insert(a){
     let number = 0;
     typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);

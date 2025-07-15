@@ -35,3 +35,9 @@ function recommendOpen(){
     document.getElementById("recommend").style.display = "none";
     document.getElementById("sankou-saito").style.display = "flex";
 }
+
+function recommendClose(){
+    document.getElementById("course-button").style.display = "flex";
+    document.getElementById("recommend").style.display = "flex";
+    document.getElementById("sankou-saito").style.display = "none";
+}
