@@ -3,6 +3,7 @@ let correctAnswer = 0;
 let restHP = 100;
 let monsterNumber = 1;
 let typeOfQuestion = JSON.parse(localStorage.getItem("course"));
+typeOfQuestion = typeOfQuestion.sort(() => Math.random() - 0.5);
 let notCorrect = 0;
 
 if(localStorage.getItem("course") === null){
@@ -12,6 +13,7 @@ if(localStorage.getItem("course") === null){
 
 function insert(a){
     let number = 0;
+    typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);
     typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);
     document.getElementById("mondaibun").textContent = typeOfQuestion[a][0];
     document.querySelectorAll(".sentakushi").forEach(sentaku => {
@@ -25,23 +27,24 @@ insert(syurui);
 
 function answerCheck(answer){
     if(typeOfQuestion[syurui][1][answer] === correctAnswer){
+
+        hpDown();
+
         document.querySelector(".moving").classList.remove("moving");
-        restHP = restHP - 10;
-        document.getElementById("hp").style.width = String(restHP) +  "%";
         document.querySelector("img").classList.add("shake");
+
         document.getElementById("all-sentakushi").style.display = "none";
-        document.getElementById("commentary").style.display = "flex";
-        if(restHP <= 0){
-            document.getElementById("next-button").style.display = "none";
-            document.getElementById("finish-button").style.display = "block";
-        }
         document.getElementById("commentary").querySelector("p").innerHTML = typeOfQuestion[syurui][3];
+        document.getElementById("commentary").style.display = "flex";
+
+        if(restHP <= 0){
+            monsterVanish();
+        }
+
         setTimeout(() => {
             document.querySelector("img").classList.remove("shake");
-            if(restHP <= 0){
-                monsterVanish();
-            }
         }, 400);
+
     }else{
         notCorrect ++;
         document.getElementById("not-correct").textContent = notCorrect;
@@ -49,8 +52,17 @@ function answerCheck(answer){
     }
 }
 
+function hpDown(){
+    restHP = restHP - 10;
+    document.getElementById("hp").style.width = String(restHP) +  "%";
+}
+
 function monsterVanish(){
-    document.querySelector("img").classList.add("vanish");
+    document.getElementById("next-button").style.display = "none";
+    document.getElementById("finish-button").style.display = "block";
+    setTimeout(() => {
+        document.querySelector("img").classList.add("vanish");
+    }, 400);
 }
 
 function nextQuestion(){
@@ -58,12 +70,9 @@ function nextQuestion(){
     document.getElementById("commentary").style.display = "none";
     document.querySelector("img").classList.add("moving");
     syurui ++;
-    if(syurui === 5){
-        syurui = 0;
-    }
     insert(syurui);
 }
 
 function finish(){
-    window.location.href = "index.html"
+    window.location.href = "index.html";
 }

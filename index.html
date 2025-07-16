@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <title>JS学習ゲーム</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,11 +13,13 @@
     <div id="main">
         <button id="course-button" onclick="courseSelectOpen()">コース選択</button>
         <button id="recommend" onclick="recommendOpen()">JS参考サイト</button>
+        <button id="log" class="not-available">学習履歴</button>
+        <button id="settei" onclick="setteiOpen()">⚙️設定⚙️</button>
         <div id="course-select-all" style="display: none;">
             <p id="course-select-daimei">コース選択</p>
             <div id="course-select">
                 <button class="course" onclick="courseLocked(window.sample)">JSの基礎知識</button>
-                <button class="course">DOM操作</button>
+                <button class="course" onclick="courseLocked(window.domQuestions)">DOM操作</button>
                 <button class="course">変数と演算子</button>
                 <button class="course">関数と条件分岐</button>
                 <button class="course">リストとディクショナリ</button>
@@ -44,12 +47,30 @@
             <div id="recommend-site">
                 <a href="https://jsprimer.net/intro/" target="_blank">JavaScript Primer</a>
                 <p class="setsumei">「JavaScript Primer　迷わないための入門書」<br>という書籍のウェブサイト版</p>
+                <hr>
                 <a href="https://www.javadrive.jp/javascript/" target="_blank">JavaScript入門 | JavaDive</a>
                 <p class="setsumei">JavaDiveという初心者のための<br>プログラミング解説サイト</p>
+                <hr>
                 <a href="https://developer.mozilla.org/ja/docs/Learn_web_development/Core/Scripting" target="_blank">ウェブ開発の学習 | MDN</a>
+                <hr>
                 <a href="https://prog-8.com/lessons/es6/study/1" target="_blank">JavaScriptⅠ| progate</a>
+                <hr>
             </div>
             <button id="back2" onclick="recommendClose()">戻る</button>
+        </div>
+        <div id="settei-gamen" style="display: none;">
+            <p id="settei-daimei">設定画面</p>
+            <div id="settei-naiyou">
+                <div>ログイン</div>
+                <button id="log-in" onclick="logIn()">ログインする</button>
+                <hr>
+                <div>設定１</div>
+                <hr>
+                <div>設定１</div>
+                <hr>
+                <div>設定１</div>
+            </div>
+            <button id="back3" onclick="setteiClose()">戻る</button>
         </div>
     </div>
     <div id="footer"></div>
