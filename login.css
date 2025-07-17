@@ -152,7 +152,7 @@ button{
     font-size: 24px;
 }
 
-#email, #password{
+#email, #password, #email2, #password2{
     font-size: 24px;
     margin: 0 0 1vh 0;
     width: 70%;

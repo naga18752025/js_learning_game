@@ -11,6 +11,13 @@ if(localStorage.getItem("course") === null){
     window.location.href = "index.html";
 }
 
+if(localStorage.getItem("theme-color") === "black"){
+    document.documentElement.style.backgroundColor = "rgb(57, 57, 57)";
+    document.body.style.backgroundColor = "rgb(57, 57, 57)";
+    document.getElementById("not-correct-board").style.color = "white";
+    document.getElementById("mondaibun").style.color = "white";
+}
+
 function insert(a){
     let number = 0;
     typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);

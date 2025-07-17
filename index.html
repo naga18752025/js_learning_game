@@ -13,7 +13,7 @@
     <div id="main">
         <button id="course-button" onclick="courseSelectOpen()">コース選択</button>
         <button id="recommend" onclick="recommendOpen()">JS参考サイト</button>
-        <button id="log" class="not-available">学習履歴</button>
+        <button id="log" class="available">学習履歴</button>
         <button id="settei" onclick="setteiOpen()">⚙️設定⚙️</button>
         <div id="course-select-all" style="display: none;">
             <p id="course-select-daimei">コース選択</p>
@@ -69,6 +69,7 @@
                     <option value="white">白</option>
                     <option value="black">黒</option>
                 </select>
+                <button id="color-button" onclick="themeColor()">決定</button>
                 <hr>
                 <div>履歴</div>
                 <button id="log-reset" onclick="logIn()">履歴を削除</button>
@@ -78,6 +79,7 @@
                     <option value="5">５問</option>
                     <option value="10">１０問</option>
                 </select>
+                <button id="number-of-questions-button">決定</button>
             </div>
             <button id="back3" onclick="setteiClose()">戻る</button>
         </div>

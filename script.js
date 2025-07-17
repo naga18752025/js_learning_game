@@ -2,6 +2,17 @@ const supabase = window.supabase.createClient("https://nugptlthxhdsdknzqucc.supa
 
 let clickPermission = true;
 
+if(localStorage.getItem("theme-color") === "black"){
+    document.getElementById("main").style.backgroundColor = "rgb(136, 136, 136)";
+    document.documentElement.style.backgroundColor = "rgb(57, 57, 57)";
+    document.body.style.backgroundColor = "rgb(57, 57, 57)";
+    document.getElementById("main").style.border = "solid 0.5vh white";
+    document.getElementById("course-select").style.backgroundColor = "rgb(151, 151, 151)";
+    document.getElementById("recommend-site").style.backgroundColor = "rgb(151, 151, 151)";
+    document.getElementById("settei-naiyou").style.backgroundColor = "rgb(151, 151, 151)";
+    document.getElementById("color").value = "black";
+}
+
 document.getElementById("main").classList.remove("vanish");
 
 function gameStart(){
@@ -68,3 +79,7 @@ function logIn(){
     window.location.href = "login.html";
 }
 
+function themeColor(){
+    localStorage.setItem("theme-color", document.getElementById("color").value);
+    window.location.reload();
+}
