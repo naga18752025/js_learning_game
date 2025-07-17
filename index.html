@@ -46,10 +46,24 @@
             <p id="learning-log-daimei">学習履歴</p>
             <div id="learning-log">
                 <div class="log">JSの基礎知識</div>
+                <p>学習回数：<span>0</span>回</p>
+                <button onclick="modalOpen()">不正解問題を確認</button>
+                <hr>
                 <div class="log">DOM操作</div>
+                <p>学習回数：<span>0</span>回</p>
+                <button onclick="modalOpen()">不正解問題を確認</button>
+                <hr>
                 <div class="log">変数と演算子</div>
+                <p>学習回数：<span>0</span>回</p>
+                <button onclick="modalOpen()">不正解問題を確認</button>
+                <hr>
                 <div class="log">関数と条件分岐</div>
+                <p>学習回数：<span>0</span>回</p>
+                <button onclick="modalOpen()">不正解問題を確認</button>
+                <hr>
                 <div class="log">リストとディクショナリ</div>
+                <p>学習回数：<span>0</span>回</p>
+                <button onclick="modalOpen()">不正解問題を確認</button>
             </div>
             <button id="back4" onclick="logClose()">戻る</button>
         </div>
@@ -93,6 +107,15 @@
                 <button id="number-of-questions-button" onclick="numberOfQuestions()">決定</button>
             </div>
             <button id="back3" onclick="setteiClose()">戻る</button>
+        </div>
+    </div>
+    <div id="mistake-check-modal">
+        <div id="mistake-check-modal-container">
+            <div id="mistake-check-modal-close" onclick="modalClose()">×</div>
+            <div id="mistake-check-modal-content">
+                <p>問題文</p>
+                <p>解答</p>
+            </div>
         </div>
     </div>
     <div id="footer"></div>

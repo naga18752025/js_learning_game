@@ -102,3 +102,24 @@ function numberOfQuestions(){
     localStorage.setItem("number-of-questions", document.getElementById("number-of-questions").value);
     window.location.reload();
 }
+
+const modal = document.getElementById("mistake-check-modal");
+
+//「開くボタン」をクリックしてモーダルを開く
+function modalOpen() {
+    modal.classList.add('is-active');
+}
+
+//「閉じるボタン」をクリックしてモーダルを閉じる
+function modalClose() {
+    modal.classList.remove('is-active');
+}
+
+//「モーダルの外側」をクリックしてモーダルを閉じる
+function modalOut(e) {
+    if (e.target == modal) {
+        modal.classList.remove('is-active');
+    }
+}
+
+addEventListener('click', modalOut);
