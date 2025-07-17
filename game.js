@@ -5,6 +5,7 @@ let monsterNumber = 1;
 let typeOfQuestion = JSON.parse(localStorage.getItem("course"));
 typeOfQuestion = typeOfQuestion.sort(() => Math.random() - 0.5);
 let notCorrect = 0;
+let downPercent = 10;
 
 if(localStorage.getItem("course") === null){
     alert("コースを選択してください");
@@ -16,6 +17,10 @@ if(localStorage.getItem("theme-color") === "black"){
     document.body.style.backgroundColor = "rgb(57, 57, 57)";
     document.getElementById("not-correct-board").style.color = "white";
     document.getElementById("mondaibun").style.color = "white";
+}
+
+if(localStorage.getItem("number-of-questions") === "5"){
+    downPercent = 20;
 }
 
 function insert(a){
@@ -60,7 +65,7 @@ function answerCheck(answer){
 }
 
 function hpDown(){
-    restHP = restHP - 10;
+    restHP = restHP - downPercent;
     document.getElementById("hp").style.width = String(restHP) +  "%";
 }
 

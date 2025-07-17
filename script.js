@@ -13,6 +13,10 @@ if(localStorage.getItem("theme-color") === "black"){
     document.getElementById("color").value = "black";
 }
 
+if(localStorage.getItem("number-of-questions") === "5"){
+        document.getElementById("number-of-questions").value = "5";
+}
+
 document.getElementById("main").classList.remove("vanish");
 
 function gameStart(){
@@ -61,6 +65,16 @@ function setteiClose(){
     document.getElementById("settei-gamen").style.display = "none";
 }
 
+function logOpen(){
+    generalClose();
+    document.getElementById("learning-log-all").style.display = "flex";
+}
+
+function logClose(){
+    generalOpen();
+    document.getElementById("learning-log-all").style.display = "none";
+}
+
 function generalClose(){
     document.getElementById("course-button").style.display = "none";
     document.getElementById("recommend").style.display = "none";
@@ -81,5 +95,10 @@ function logIn(){
 
 function themeColor(){
     localStorage.setItem("theme-color", document.getElementById("color").value);
+    window.location.reload();
+}
+
+function numberOfQuestions(){
+    localStorage.setItem("number-of-questions", document.getElementById("number-of-questions").value);
     window.location.reload();
 }

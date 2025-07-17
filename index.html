@@ -13,7 +13,7 @@
     <div id="main">
         <button id="course-button" onclick="courseSelectOpen()">コース選択</button>
         <button id="recommend" onclick="recommendOpen()">JS参考サイト</button>
-        <button id="log" class="available">学習履歴</button>
+        <button id="log" class="available" onclick="logOpen()">学習履歴</button>
         <button id="settei" onclick="setteiOpen()">⚙️設定⚙️</button>
         <div id="course-select-all" style="display: none;">
             <p id="course-select-daimei">コース選択</p>
@@ -41,6 +41,17 @@
                 <button class="course"></button>
             </div>
             <button id="back" onclick="courseSelectClose()">戻る</button>
+        </div>
+        <div id="learning-log-all" style="display: none;">
+            <p id="learning-log-daimei">学習履歴</p>
+            <div id="learning-log">
+                <div class="log">JSの基礎知識</div>
+                <div class="log">DOM操作</div>
+                <div class="log">変数と演算子</div>
+                <div class="log">関数と条件分岐</div>
+                <div class="log">リストとディクショナリ</div>
+            </div>
+            <button id="back4" onclick="logClose()">戻る</button>
         </div>
         <div id="sankou-saito" style="display: none;">
             <p id="sankou-saito-daimei">JS参考サイト</p>
@@ -77,9 +88,9 @@
                 <div>出題数</div>
                 <select id="number-of-questions">
                     <option value="5">５問</option>
-                    <option value="10">１０問</option>
+                    <option value="10" selected>１０問</option>
                 </select>
-                <button id="number-of-questions-button">決定</button>
+                <button id="number-of-questions-button" onclick="numberOfQuestions()">決定</button>
             </div>
             <button id="back3" onclick="setteiClose()">戻る</button>
         </div>
