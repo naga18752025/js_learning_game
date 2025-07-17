@@ -31,3 +31,29 @@ function signUpClose(){
 function back(){
     window.location.href = "index.html";
 }
+
+async function signIn(email, password) {
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email: email,
+        password: password,
+    });
+
+    if (error) {
+        console.error("ログイン失敗:", error.message);
+    } else {
+        console.log("ログイン成功:", data);
+    }
+}
+
+async function signUp(email, password) {
+const { data, error } = await supabase.auth.signUp({
+        email: 'example@example.com',
+        password: 'password123'
+    });
+
+    if (error) {
+        console.error('サインアップ失敗:', error.message);
+    } else {
+        console.log('確認メールを送信しました');
+    }
+}

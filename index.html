@@ -61,14 +61,23 @@
         <div id="settei-gamen" style="display: none;">
             <p id="settei-daimei">設定画面</p>
             <div id="settei-naiyou">
-                <div>ログイン</div>
+                <div id="logIn-daimei">ログイン</div>
                 <button id="log-in" onclick="logIn()">ログインする</button>
                 <hr>
-                <div>設定１</div>
+                <div>テーマカラー</div>
+                <select id="color">
+                    <option value="white">白</option>
+                    <option value="black">黒</option>
+                </select>
                 <hr>
-                <div>設定１</div>
+                <div>履歴</div>
+                <button id="log-reset" onclick="logIn()">履歴を削除</button>
                 <hr>
-                <div>設定１</div>
+                <div>出題数</div>
+                <select id="number-of-questions">
+                    <option value="5">５問</option>
+                    <option value="10">１０問</option>
+                </select>
             </div>
             <button id="back3" onclick="setteiClose()">戻る</button>
         </div>
