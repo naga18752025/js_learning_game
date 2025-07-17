@@ -225,6 +225,7 @@ p{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 1.7vh;
+    color: black;
 }
 
 #finish-button{
@@ -237,4 +238,5 @@ p{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 1.7vh;
+    color: black;
 }

@@ -44,7 +44,7 @@
         </div>
         <div id="learning-log-all" style="display: none;">
             <p id="learning-log-daimei">学習履歴</p>
-            <div id="learning-log">
+            <div id="learning-log" style="display: none;">
                 <div class="log">JSの基礎知識</div>
                 <p>学習回数：<span>0</span>回</p>
                 <button onclick="modalOpen()">不正解問題を確認</button>
@@ -64,6 +64,9 @@
                 <div class="log">リストとディクショナリ</div>
                 <p>学習回数：<span>0</span>回</p>
                 <button onclick="modalOpen()">不正解問題を確認</button>
+            </div>
+            <div id="no-learning-log">
+                <p>ログインしてください</p>
             </div>
             <button id="back4" onclick="logClose()">戻る</button>
         </div>
@@ -88,18 +91,19 @@
             <div id="settei-naiyou">
                 <div id="logIn-daimei">ログイン</div>
                 <button id="log-in" onclick="logIn()">ログインする</button>
+                <button id="log-out" onclick="logOut()" style="display: none;">ログアウト</button>
                 <hr>
-                <div>テーマカラー</div>
+                <div id="theme-color-daimei">テーマカラー</div>
                 <select id="color">
                     <option value="white">白</option>
                     <option value="black">黒</option>
                 </select>
                 <button id="color-button" onclick="themeColor()">決定</button>
                 <hr>
-                <div>履歴</div>
+                <div id="log-daimei">履歴</div>
                 <button id="log-reset" onclick="logIn()">履歴を削除</button>
                 <hr>
-                <div>出題数</div>
+                <div id="number-of-questions-daimei">出題数</div>
                 <select id="number-of-questions">
                     <option value="5">５問</option>
                     <option value="10" selected>１０問</option>
@@ -120,6 +124,7 @@
     </div>
     <div id="footer"></div>
     <script src="mondai.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="script_1.js" defer></script>
+    <script src="script_2.js" defer></script>
 </body>
 </html>
