@@ -14,14 +14,6 @@ if(localStorage.getItem("number-of-questions") === "5"){
     document.getElementById("number-of-questions").value = "5";
 }
 
-function gameStart(){
-    document.getElementById("main").classList.add("vanish");
-    setTimeout(() => {
-        window.location.href = "game.html";
-        document.getElementById("main").style.display = "none";
-    }, 1500);
-}
-
 function courseSelectOpen(){
     generalClose();
     document.getElementById("course-select-all").style.display = "flex";
@@ -38,6 +30,15 @@ function courseLocked(course){
         localStorage.setItem("course", JSON.stringify(course));
         gameStart();
     }
+}
+
+function gameStart(){
+    document.getElementById("loading").style.display = "flex";
+    document.getElementById("main").classList.add("vanish");
+    setTimeout(() => {
+        window.location.href = "game.html";
+        document.getElementById("main").style.display = "none";
+    }, 1500);
 }
 
 function recommendOpen(){

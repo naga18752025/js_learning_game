@@ -42,5 +42,6 @@ function generalOpen(){
 }
 
 function back(){
+    document.getElementById("loading").style.display = "flex";
     window.location.href = "index.html";
 }

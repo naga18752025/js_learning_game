@@ -27,10 +27,12 @@ async function checkLogin() {
 checkLogin();
 
 function logIn(){
+    document.getElementById("loading").style.display = "flex";
     window.location.href = "login.html";
 }
 
 async function logOut() {
+    document.getElementById("loading").style.display = "flex";
     const { error } = await supabase.auth.signOut();
     if (error) {
         console.error("ログアウト失敗:", error.message);
@@ -42,11 +44,13 @@ async function logOut() {
 }
 
 function themeColor(){
+    document.getElementById("loading").style.display = "flex";
     localStorage.setItem("theme-color", document.getElementById("color").value);
     window.location.reload();
 }
 
 function numberOfQuestions(){
+    document.getElementById("loading").style.display = "flex";
     localStorage.setItem("number-of-questions", document.getElementById("number-of-questions").value);
     window.location.reload();
 }

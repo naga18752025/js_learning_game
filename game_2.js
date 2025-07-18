@@ -1,14 +1,11 @@
 let questionNumber = 0;
 let correctAnswer = "";
 let restHP = 100;
-let monsterNumber = 1;
-let typeOfQuestion = JSON.parse(localStorage.getItem("course"));
-typeOfQuestion = typeOfQuestion.sort(() => Math.random() - 0.5);
-let notCorrect = 0;
 let downPercent = 10;
-
-monsterNumber = Math.floor(Math.random() * 5) + 1;
+let monsterNumber = Math.floor(Math.random() * 5) + 1;
 document.querySelector("img").src = "monster" + String(monsterNumber) + ".png";
+let typeOfQuestion = JSON.parse(localStorage.getItem("course")).sort(() => Math.random() - 0.5);
+let notCorrect = 0;
 
 function insert(a){
     let number = 0;
@@ -27,20 +24,20 @@ function answerCheck(answer){
     if(typeOfQuestion[questionNumber][1][answer] === correctAnswer){
         hpDown();
         monsterShaking();
-
-        document.getElementById("all-sentakushi").style.display = "none";
-        document.getElementById("commentary").querySelector("p").innerHTML = typeOfQuestion[questionNumber][3];
-        document.getElementById("commentary").style.display = "flex";
-
+        commentaryOpen();
         if(restHP <= 0){
             monsterVanish();
         }
-
     }else{
         notCorrect ++;
         document.getElementById("not-correct").textContent = notCorrect;
         alert("不正解");
     }
+}
+
+function hpDown(){
+    restHP = restHP - downPercent;
+    document.getElementById("hp").style.width = String(restHP) +  "%";
 }
 
 function monsterShaking(){
@@ -51,9 +48,10 @@ function monsterShaking(){
     }, 400);
 }
 
-function hpDown(){
-    restHP = restHP - downPercent;
-    document.getElementById("hp").style.width = String(restHP) +  "%";
+function commentaryOpen(){
+    document.getElementById("all-sentakushi").style.display = "none";
+    document.getElementById("commentary").querySelector("p").innerHTML = typeOfQuestion[questionNumber][3];
+    document.getElementById("commentary").style.display = "flex";
 }
 
 function monsterVanish(){
@@ -65,11 +63,11 @@ function monsterVanish(){
 }
 
 function nextQuestion(){
-    document.getElementById("all-sentakushi").style.display = "flex";
-    document.getElementById("commentary").style.display = "none";
-    document.querySelector("img").classList.add("moving");
     questionNumber ++;
     insert(questionNumber);
+    document.getElementById("commentary").style.display = "none";
+    document.getElementById("all-sentakushi").style.display = "flex";
+    document.querySelector("img").classList.add("moving");
 }
 
 function finish(){
