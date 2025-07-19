@@ -1,17 +1,13 @@
 let questionNumber = 0;
 let correctAnswer = "";
 let restHP = 100;
-let downPercent = 10;
 let typeOfQuestion = JSON.parse(localStorage.getItem("course")).sort(() => Math.random() - 0.5);
 let notCorrect = 0;
 
 function insertQuestion(a){
-    let number = 0;
-    typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);
     document.getElementById("mondaibun").textContent = typeOfQuestion[a][0];
-    document.querySelectorAll(".sentakushi").forEach(sentaku => {
-        sentaku.textContent = typeOfQuestion[a][1][number];
-        number ++;
+    document.querySelectorAll(".sentakushi").forEach((sentakushi, index) => {
+        sentakushi.textContent = typeOfQuestion[a][1][index];
     });
     correctAnswer = typeOfQuestion[a][2];
 }
@@ -27,14 +23,18 @@ function answerCheck(answer){
             monsterVanish();
         }
     }else{
-        notCorrect ++;
-        document.getElementById("not-correct").textContent = notCorrect;
-        alert("不正解");
+        countMistake();
     }
 }
 
+function countMistake(){
+    notCorrect ++;
+    document.getElementById("not-correct").textContent = notCorrect;
+    alert("不正解");
+}
+
 function hpDown(){
-    restHP = restHP - downPercent;
+    restHP = restHP - window.downPercent;
     document.getElementById("hp").style.width = String(restHP) +  "%";
 }
 
@@ -69,5 +69,6 @@ function nextQuestion(){
 }
 
 function finish(){
+    document.getElementById("loading").style.display = "flex";
     window.location.href = "index.html";
 }
