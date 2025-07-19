@@ -26,13 +26,6 @@ function signInCheck(){
         return;
     }
     const password = document.getElementById("password").value;
-    const isValid = password.length >= 6 &&
-                    /[a-zA-Z]/.test(password) &&
-                    /[0-9]/.test(password);
-    if (!isValid) {
-        alert("パスワードは6文字以上で、英字と数字の両方を含めてください。");
-        return;
-    }
     signIn(email, password);
     clickPermission = false;
 }

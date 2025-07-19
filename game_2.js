@@ -7,7 +7,7 @@ document.querySelector("img").src = "monster" + String(monsterNumber) + ".png";
 let typeOfQuestion = JSON.parse(localStorage.getItem("course")).sort(() => Math.random() - 0.5);
 let notCorrect = 0;
 
-function insert(a){
+function insertQuestion(a){
     let number = 0;
     typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);
     document.getElementById("mondaibun").textContent = typeOfQuestion[a][0];
@@ -18,7 +18,7 @@ function insert(a){
     correctAnswer = typeOfQuestion[a][2];
 }
 
-insert(questionNumber);
+insertQuestion(questionNumber);
 
 function answerCheck(answer){
     if(typeOfQuestion[questionNumber][1][answer] === correctAnswer){
@@ -64,7 +64,7 @@ function monsterVanish(){
 
 function nextQuestion(){
     questionNumber ++;
-    insert(questionNumber);
+    insertQuestion(questionNumber);
     document.getElementById("commentary").style.display = "none";
     document.getElementById("all-sentakushi").style.display = "flex";
     document.querySelector("img").classList.add("moving");

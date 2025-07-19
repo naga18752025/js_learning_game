@@ -1,13 +1,17 @@
-if(localStorage.getItem("theme-color") === "black"){
-    document.getElementById("main").style.backgroundColor = "rgb(136, 136, 136)";
-    ["documentElement", "body"].forEach(tag => {
-        document[tag].style.backgroundColor = "rgb(57, 57, 57)";
-    });
-    document.getElementById("main").style.border = "solid 0.5vh white";
-    ["signIn-main", "signUp-main"].forEach(id => {
-        document.getElementById(id).style.backgroundColor = "rgb(151, 151, 151)";
-    });
+function darkTheme(){
+    if(localStorage.getItem("theme-color") === "black"){
+        document.getElementById("main").style.backgroundColor = "rgb(136, 136, 136)";
+        ["documentElement", "body"].forEach(tag => {
+            document[tag].style.backgroundColor = "rgb(57, 57, 57)";
+        });
+        document.getElementById("main").style.border = "solid 0.5vh white";
+        ["signIn-main", "signUp-main"].forEach(id => {
+            document.getElementById(id).style.backgroundColor = "rgb(151, 151, 151)";
+        });
+    }
 }
+
+darkTheme();
 
 function signInOpen(){
     generalClose();
