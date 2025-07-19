@@ -2,8 +2,6 @@ let questionNumber = 0;
 let correctAnswer = "";
 let restHP = 100;
 let downPercent = 10;
-let monsterNumber = Math.floor(Math.random() * 5) + 1;
-document.querySelector("img").src = "monster" + String(monsterNumber) + ".png";
 let typeOfQuestion = JSON.parse(localStorage.getItem("course")).sort(() => Math.random() - 0.5);
 let notCorrect = 0;
 

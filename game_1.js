@@ -1,3 +1,10 @@
+function generateMonsterType(){
+    let monsterNumber = Math.floor(Math.random() * 5) + 1;
+    document.querySelector("img").src = "monster" + String(monsterNumber) + ".png";
+}
+
+generateMonsterType();
+
 function CourseExistCheck(){
     if(localStorage.getItem("course") === null){
         alert("コースを選択してください");
