@@ -2,7 +2,7 @@ window.downPercent = 10;
 
 function generateMonsterType(){
     let monsterNumber = Math.floor(Math.random() * 5) + 1;
-    document.querySelector("img").src = "monster" + String(monsterNumber) + ".png";
+    document.querySelector("img").src = "images/monster" + String(monsterNumber) + ".png";
 }
 
 generateMonsterType();
