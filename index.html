@@ -12,8 +12,8 @@
     <div id="header">JS学習ゲーム</div>
     <div id="main">
         <button id="course-button" onclick="courseSelectOpen()">コース選択</button>
-        <button id="recommend" onclick="recommendOpen()">JS参考サイト</button>
-        <button id="log" class="available" onclick="logOpen()">学習履歴</button>
+        <button id="recommend-button" onclick="recommendOpen()">JS参考サイト</button>
+        <button id="log-button" class="log-button" onclick="logOpen()">学習履歴</button>
         <button id="settei" onclick="setteiOpen()">⚙️設定⚙️</button>
         <div id="course-select-all" style="display: none;">
             <p id="course-select-daimei">コース選択</p>
@@ -45,25 +45,6 @@
         <div id="learning-log-all" style="display: none;">
             <p id="learning-log-daimei">学習履歴</p>
             <div id="learning-log" style="display: none;">
-                <div class="log">JSの基礎知識</div>
-                <p>学習回数：<span>0</span>回</p>
-                <button onclick="modalOpen()">不正解問題を確認</button>
-                <hr>
-                <div class="log">DOM操作</div>
-                <p>学習回数：<span>0</span>回</p>
-                <button onclick="modalOpen()">不正解問題を確認</button>
-                <hr>
-                <div class="log">変数と演算子</div>
-                <p>学習回数：<span>0</span>回</p>
-                <button onclick="modalOpen()">不正解問題を確認</button>
-                <hr>
-                <div class="log">関数と条件分岐</div>
-                <p>学習回数：<span>0</span>回</p>
-                <button onclick="modalOpen()">不正解問題を確認</button>
-                <hr>
-                <div class="log">リストとディクショナリ</div>
-                <p>学習回数：<span>0</span>回</p>
-                <button onclick="modalOpen()">不正解問題を確認</button>
             </div>
             <div id="no-learning-log">
                 <p>ログインしてください</p>
@@ -101,7 +82,7 @@
                 <button id="color-button" onclick="themeColor()">決定</button>
                 <hr>
                 <div id="log-daimei">履歴</div>
-                <button id="log-reset">履歴を削除</button>
+                <button id="log-reset" onclick="deleteCheck()">履歴を削除</button>
                 <hr>
                 <div id="number-of-questions-daimei">出題数</div>
                 <select id="number-of-questions">
@@ -117,8 +98,7 @@
         <div id="mistake-check-modal-container">
             <div id="mistake-check-modal-close" onclick="modalClose()">×</div>
             <div id="mistake-check-modal-content">
-                <p>問題文</p>
-                <p>解答</p>
+                <p>なし</p>
             </div>
         </div>
     </div>

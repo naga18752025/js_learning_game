@@ -32,6 +32,8 @@ function courseSelectClose(){
     document.getElementById("course-select-all").style.display = "none";
 }
 
+let clickPermission = true;
+
 function courseLocked(course){
     if(clickPermission === true){
         clickPermission = false;
@@ -80,13 +82,30 @@ function logClose(){
 }
 
 function generalClose(){
-    ["course-button", "recommend", "settei", "log"].forEach(id => {
+    ["course-button", "recommend-button", "settei", "log-button"].forEach(id => {
         document.getElementById(id).style.display = "none";
     });
 }
 
 function generalOpen(){
-    ["course-button", "recommend", "settei", "log"].forEach(id => {
+    ["course-button", "recommend-button", "settei", "log-button"].forEach(id => {
         document.getElementById(id).style.display = "flex";
     });
+}
+
+function logIn(){
+    document.getElementById("loading").style.display = "flex";
+    window.location.href = "login.html";
+}
+
+function themeColor(){
+    document.getElementById("loading").style.display = "flex";
+    localStorage.setItem("theme-color", document.getElementById("color").value);
+    window.location.reload();
+}
+
+function numberOfQuestions(){
+    document.getElementById("loading").style.display = "flex";
+    localStorage.setItem("number-of-questions", document.getElementById("number-of-questions").value);
+    window.location.reload();
 }
