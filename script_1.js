@@ -42,7 +42,9 @@ async function courseLocked(course){
             await loadTopic(course);
             gameStart();
         } catch (error) {
-            alert("エラーが発生しました")
+            alert("エラーが発生しました");
+            document.getElementById("loading").style.display = "none";
+            clickPermission = true;
         }
     }
 }
@@ -56,7 +58,7 @@ async function loadTopic(topicName) {
         console.log(questions);
     } catch (err) {
         console.error("読み込み失敗:", err);
-        return [];
+        throw err; 
     }
 }
 
