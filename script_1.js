@@ -34,16 +34,33 @@ function courseSelectClose(){
 
 let clickPermission = true;
 
-function courseLocked(course){
+async function courseLocked(course){
     if(clickPermission === true){
-        clickPermission = false;
-        localStorage.setItem("course", JSON.stringify(course));
-        gameStart();
+        try {
+            document.getElementById("loading").style.display = "flex";
+            clickPermission = false;
+            await loadTopic(course);
+            gameStart();
+        } catch (error) {
+            alert("エラーが発生しました")
+        }
+    }
+}
+
+async function loadTopic(topicName) {
+    try {
+        const response = await fetch(`./data/${topicName}.json`);
+        if (!response.ok) throw new Error("ファイルが見つかりません");
+        const questions = await response.json();
+        localStorage.setItem("course", JSON.stringify(questions));
+        console.log(questions);
+    } catch (err) {
+        console.error("読み込み失敗:", err);
+        return [];
     }
 }
 
 function gameStart(){
-    document.getElementById("loading").style.display = "flex";
     document.getElementById("main").classList.add("vanish");
     setTimeout(() => {
         window.location.href = "game.html";
