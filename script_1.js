@@ -55,6 +55,7 @@ async function loadTopic(topicName) {
         if (!response.ok) throw new Error("ファイルが見つかりません");
         const questions = await response.json();
         localStorage.setItem("course", JSON.stringify(questions));
+        localStorage.setItem("courseName", topicName);
         console.log(questions);
     } catch (err) {
         console.error("読み込み失敗:", err);

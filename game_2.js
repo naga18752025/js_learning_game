@@ -1,6 +1,7 @@
 const supabase = window.supabase.createClient("https://nugptlthxhdsdknzqucc.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51Z3B0bHRoeGhkc2RrbnpxdWNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI2NDc3MzQsImV4cCI6MjA2ODIyMzczNH0.sfSPF7oVLLYh4eWaUSOyR4rWf4oracLr7W-Wqo88XIc");
 
-const topic = "2ad1949c-5bbe-4cc3-937d-4248c7c8b384";
+const topicIdData = {"dom":"2ad1949c-5bbe-4cc3-937d-4248c7c8b384"}
+const topic = topicIdData[localStorage.getItem("courseName")];
 let questionNumber = 0;
 let correctAnswer = "";
 let restHP = 100;
