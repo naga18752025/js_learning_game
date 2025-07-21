@@ -10,7 +10,9 @@ let notCorrect = 0;
 let mistakes = [];
 
 function insertQuestion(a){
-    document.getElementById("mondaibun").textContent = typeOfQuestion[a][0];
+    console.log("before:", typeOfQuestion[a][1]);
+    typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);
+    console.log("after:", typeOfQuestion[a][1]);
     typeOfQuestion[a][1] = typeOfQuestion[a][1].sort(() => Math.random() - 0.5);
     document.querySelectorAll(".sentakushi").forEach((sentakushi, index) => {
         sentakushi.textContent = typeOfQuestion[a][1][index];
