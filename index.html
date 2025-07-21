@@ -19,20 +19,20 @@
             <p id="course-select-daimei">コース選択</p>
             <div id="course-select">
                 <button class="course" onclick="courseLocked('kiso')">基礎構文・宣言</button>
-                <button class="course">制御構文</button>
-                <button class="course">関数とスコープ</button>
-                <button class="course">配列とオブジェクト</button>
+                <button class="course" onclick="courseLocked('control')">制御構文</button>
+                <button class="course" onclick="courseLocked('function')">関数とスコープ</button>
+                <button class="course" onclick="courseLocked('list')">配列とオブジェクト</button>
                 <button class="course" onclick="courseLocked('dom')">DOM操作</button>
-                <button class="course">非同期処理</button>
-                <button class="course">エラー処理</button>
-                <button class="course">ES6以降の機能</button>
-                <button class="course">クラスとオブジェクト指向</button>
-                <button class="course">ブラウザとウェブAPI</button>
-                <button class="course">型の変換と真偽値の挙動</button>
-                <button class="course">正規表現</button>
-                <button class="course">jQuery</button>
-                <button class="course">モジュール化</button>
-                <button class="course">デバッグとコンソールの使い方</button>
+                <button class="course" onclick="courseLocked('async')">非同期処理</button>
+                <button class="course" onclick="courseLocked('error')">エラー処理</button>
+                <button class="course" onclick="courseLocked('ES6')">ES6以降の機能</button>
+                <button class="course" onclick="courseLocked('class')">クラスとオブジェクト指向</button>
+                <button class="course" onclick="courseLocked('API')">ブラウザとウェブAPI</button>
+                <button class="course" onclick="courseLocked('type')">型の変換と真偽値の挙動</button>
+                <button class="course" onclick="courseLocked('regex')">正規表現</button>
+                <button class="course" onclick="courseLocked('jQuery')">jQuery</button>
+                <button class="course" onclick="courseLocked('module')">モジュール化</button>
+                <button class="course" onclick="courseLocked('debug')">デバッグとコンソールの使い方</button>
             </div>
             <button id="back" onclick="courseSelectClose()">戻る</button>
         </div>
