@@ -3,6 +3,7 @@ html, body{
     justify-content: center;
     font-family: "M PLUS Rounded 1c", sans-serif;
     background-color: rgb(250, 254, 255);
+    overscroll-behavior: contain;
 }
 
 #header{
@@ -111,6 +112,8 @@ button{
     overflow: auto;
     overscroll-behavior: contain; /* スクロールが親に伝播しない */
     touch-action: auto; /* モバイル対策 */
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
 }
 
 #course-select, #recommend-site, #settei-naiyou, #learning-log{
