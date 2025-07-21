@@ -33,15 +33,37 @@ html, body{
     z-index: 9999;
 }
 
-#not-correct-board{
+
+#count-and-quit{
     margin:0;
     padding:0;
     position: absolute;
     bottom:90%;
     width:80%;
+    display: flex;
+    align-items: center;
+}
+
+#not-correct-board{
+    margin:0;
+    padding:0;
+    justify-self: left;
     color: black;
     font-size: 1.7vh;
-    z-index: 9999;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+#quit-button{
+    margin:0;
+    padding:2px;
+    background-color: rgb(241, 173, 99);
+    border: none;
+    border-radius: 5px;
+    justify-self: right;
+    color: black;
+    font-size: 1.7vh;
+    margin-left: auto;
+    font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 img{
@@ -60,8 +82,8 @@ img{
     bottom:50%;
     width:80%;
     max-height: 40%;
-    border-top: solid 5px black;
-    border-bottom: solid 5px black;
+    border-top: solid 0.5vh black;
+    border-bottom: solid 0.5vh black;
     display: flex;               /* 横並び制御 */
     justify-content: center;     /* 横方向中央揃え */
     align-items: center;         /* 縦方向揃え（任意） */
