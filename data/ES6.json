@@ -1,0 +1,62 @@
+[
+  [
+    "アロー関数の正しい記述はどれ？",
+    ["const add = (a, b) => a + b;", "function => (a, b) { return a + b; }", "add = > (a, b) => { return a + b; }", "const => add(a, b) = a + b;"],
+    "const add = (a, b) => a + b;",
+    "① const add = (a, b) => a + b; → 正解。これはアロー関数の典型的な書き方<br>② function => (a, b) { return a + b; } → functionと=>を混ぜる構文は存在しない<br>③ add = > (a, b) => { return a + b; } → 構文が崩れており構文エラー<br>④ const => add(a, b) = a + b; → constと=>の位置が間違っており無効な構文"
+  ],
+  [
+    "letとvarの主な違いは？",
+    ["スコープの違い", "文字数の違い", "型の違い", "関数内でしか使えないかどうか"],
+    "スコープの違い",
+    "① スコープの違い → 正解。letはブロックスコープ、varは関数スコープ<br>② 文字数の違い → 文字数は無関係<br>③ 型の違い → letとvarの型は同じく動的型<br>④ 関数内でしか使えないかどうか → どちらも関数内でも外でも使える"
+  ],
+  [
+    "constで宣言された変数にできない操作は？",
+    ["再代入", "オブジェクトのプロパティ変更", "関数の定義", "配列の要素追加"],
+    "再代入",
+    "① 再代入 → 正解。constは再代入できない<br>② オブジェクトのプロパティ変更 → オブジェクトの中身の変更は可能（ミュータブル）<br>③ 関数の定義 → 関数もconstで定義できる<br>④ 配列の要素追加 → 配列の要素追加も可能（再代入ではない）"
+  ],
+  [
+    "テンプレートリテラルの使い方として正しいのは？",
+    ["`Hello, ${name}`", "'Hello, ${name}'", "\"Hello, ${name}\"", "Hello + ${name}"],
+    "`Hello, ${name}`",
+    "① `Hello, ${name}` → 正解。バッククォートを使って式展開できる<br>② 'Hello, ${name}' → シングルクォートでは式展開されない<br>③ \"Hello, ${name}\" → ダブルクォートでも同様に式展開不可<br>④ Hello + ${name} → +と${}は併用できない"
+  ],
+  [
+    "分割代入の正しい書き方は？",
+    ["const [a, b] = [1, 2];", "const (a, b) = [1, 2];", "let {a, b} = (1, 2);", "var = [a, b] 1, 2;"],
+    "const [a, b] = [1, 2];",
+    "① const [a, b] = [1, 2]; → 正解。配列の要素を順に変数に代入<br>② const (a, b) = [1, 2]; → ()を使う構文は存在しない<br>③ let {a, b} = (1, 2); → オブジェクト分割には{}を使うが右辺が誤り<br>④ var = [a, b] 1, 2; → 構文として無効"
+  ],
+  [
+    "デフォルト引数が使えるのはどの書き方？",
+    ["function greet(name = 'Guest') {}", "function greet = (name: 'Guest') {}", "function greet(name == 'Guest') {}", "greet(name = Guest) => {}"],
+    "function greet(name = 'Guest') {}",
+    "① function greet(name = 'Guest') {} → 正解。引数に初期値を設定するES6構文<br>② function greet = (name: 'Guest') {} → アロー関数でもないし構文も誤り<br>③ function greet(name == 'Guest') {} → ==は比較演算子で代入には使えない<br>④ greet(name = Guest) => {} → アロー関数の構文として誤っている"
+  ],
+  [
+    "スプレッド構文を正しく使っているのは？",
+    ["const arr2 = [...arr1];", "const arr2 = ..arr1;", "const arr2 = arr1...", "const arr2 = expand(arr1);"],
+    "const arr2 = [...arr1];",
+    "① const arr2 = [...arr1]; → 正解。...で配列を展開できる<br>② const arr2 = ..arr1; → ..という構文は存在しない<br>③ onst arr2 = arr1... → 末尾の...は構文エラー<br>④ const arr2 = expand(arr1); → expandはJavaScriptに存在しない関数"
+  ],
+  [
+    "Setオブジェクトの特徴として正しいのは？",
+    ["重複を許さない", "順番が保証される", "キーと値を持つ", "自動でソートされる"],
+    "重複を許さない",
+    "① 重複を許さない → 正解。Setは一意の値だけを保持<br>② 順番が保証される → 順番は保証されない<br>③ キーと値を持つ → キーと値を持つのはMap<br>④ 自動でソートされる → 自動ソートの機能はない"
+  ],
+  [
+    "MapとObjectの主な違いは？",
+    ["任意の型をキーにできるか", "値を持てるかどうか", "数値が使えるか", "読み取り専用かどうか"],
+    "任意の型をキーにできるか",
+    "① 任意の型をキーにできるか → 正解。Mapはオブジェクトなどもキーにできる<br>② 値を持てるかどうか → 両方とも値を持てる<br>③ 数値が使えるか → Objectでも数値キーは文字列として扱える<br>④ 読み取り専用かどうか → 両方とも読み書き可能"
+  ],
+  [
+    "クラスのメソッド定義として正しいのは？",
+    ["class A { greet() { return 'Hi'; } }", "class A { function greet() { return 'Hi'; } }", "class A => { greet: function() { return 'Hi'; } }", "class A { const greet = () => 'Hi'; }"],
+    "class A { greet() { return 'Hi'; } }",
+    "① class A { greet() { return 'Hi'; } } → 正解。メソッド定義の正しい構文<br>② class A { function greet() { return 'Hi'; } } → class内でfunctionキーワードは使わない<br>③ class A => { greet: function() { return 'Hi'; } } → =>を使う位置が不適切<br>④ class A { const greet = () => 'Hi'; } → class内では関数式を直接プロパティとして書けない"
+  ]
+]

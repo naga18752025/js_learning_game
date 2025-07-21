@@ -1,0 +1,62 @@
+[
+  [
+    "ES Modulesでモジュールを読み込む正しい構文は？",
+    ["import { func } from './module.js';", "require('./module.js')", "include('./module.js')", "use './module.js'"],
+    "import { func } from './module.js';",
+    "① import { func } from './module.js'; → 正解。ES Modulesの基本的なimport構文<br>② require('./module.js') → requireはCommonJSでESMとは異なる方式<br>③ include('./module.js') → includeという構文はJavaScriptには存在しない<br>④ use './module.js' → use構文は存在しない。Perlなどの文法と混同している"
+  ],
+  [
+    "モジュールから値を出力する正しい構文は？",
+    ["export const value = 1;", "send value = 1;", "public value = 1;", "expose value = 1;"],
+    "export const value = 1;",
+    "① export const value = 1; → 正解。ESMで値をエクスポートする正しい方法<br>② send value = 1; → sendはJavaScriptの構文ではない<br>③ public value = 1; → publicはクラス内の修飾子。exportとは無関係<br>④ expose value = 1; → exposeは非標準の用語で構文エラー"
+  ],
+  [
+    "デフォルトエクスポートの正しい構文は？",
+    ["export default function() {}", "export = function() {}", "module.export = function() {}", "function() => export default"],
+    "export default function() {}",
+    "① export default function() {} → 正解。デフォルトで関数をエクスポートする方法<br>② export = function() {} → export = はTypeScriptの構文でESMでは使えない<br>③ module.export = function() {} → module.exportはCommonJSの書き方<br>④ function() => export default → function() => は構文エラー。exportの位置も誤り"
+  ],
+  [
+    "import構文が使える環境はどれ？",
+    ["type='module'が指定されたブラウザ環境", "どのJavaScript環境でも使える", "Node.js v6以前", "HTML内に書いていれば必ず動く"],
+    "type='module'が指定されたブラウザ環境",
+    "① type='module'が指定されたブラウザ環境 → 正解。モジュールとして読み込むにはscriptタグにtype='module'が必要<br>② どのJavaScript環境でも使える → 古い環境では使えない。ES Modulesは比較的新しい仕様<br>③ Node.js v6以前 → Node.js v6ではまだ未対応<br>④ HTML内に書いていれば必ず動く → HTMLに書くだけではモジュール扱いにならない"
+  ],
+  [
+    "モジュールスコープの特徴は？",
+    ["グローバルスコープと切り離されている", "すべての変数がグローバルになる", "関数だけが共有される", "変数は自動的にwindowに追加される"],
+    "グローバルスコープと切り離されている",
+    "① グローバルスコープと切り離されている → 正解。モジュールは独自のスコープを持ち、グローバルと隔離されている<br>② すべての変数がグローバルになる → 逆。変数はモジュール内部に閉じる<br>③ 関数だけが共有される → 関数も明示的にexportしない限り共有されない<br>④ 変数は自動的にwindowに追加される → windowに追加されるのはグローバル変数であり、モジュールではそうならない"
+  ],
+  [
+    "次のうち、モジュールとして動作しないのは？",
+    ["ファイル拡張子が.mjsである", "scriptタグにtype='module'がある", "importやexportを含んでいる", "普通の.jsファイルで何も指定しない"],
+    "普通の.jsファイルで何も指定しない",
+    "① 普通の.jsファイルで何も指定しない → 正解。拡張子.jsでtype指定なしでは通常のスクリプトとして扱われる<br>② scriptタグにtype='module'がある → type='module'指定でブラウザがモジュールとして解釈する<br>③ importやexportを含んでいる → import/exportがあればモジュールになる前提だが、実行環境に依存する<br>④ ファイル拡張子が.mjsである → mjsファイルはNode.jsでモジュールとして扱われる"
+  ],
+  [
+    "モジュールの読み込みでファイルパスに必要なものは？",
+    ["拡張子 .js を含める", "import時にhttp://を必ずつける", "import先のファイルはHTML内にscriptで記述する", "importするファイルにはmain()が必要"],
+    "拡張子 .js を含める",
+    "① 拡張子 .js を含める → 正解。ブラウザでは拡張子が必須（省略不可）<br>② import時にhttp://を必ずつける → ローカルファイル読み込みならhttpは不要<br>③ import先のファイルはHTML内にscriptで記述する → importはHTMLではなく、JavaScript内で記述する<br>④ importするファイルにはmain()が必要 → main関数は不要。モジュール内に任意のコードを書ける"
+  ],
+  [
+    "CommonJSの特徴として正しいのは？",
+    ["requireでモジュールを読み込む", "ES Modulesより新しい仕様", "export defaultが基本", "ブラウザ専用である"],
+    "requireでモジュールを読み込む",
+    "① requireでモジュールを読み込む → 正解。CommonJSはNode.jsで使われる仕様でrequireが基本<br>② ES Modulesより新しい仕様 → ESMのほうが新しく標準化された仕様<br>③ export defaultが基本 → CommonJSではmodule.exportsやexportsを使う<br>④ ブラウザ専用である → CommonJSはブラウザでは基本的に使えない"
+  ],
+  [
+    "モジュールを使う利点として適切なのは？",
+    ["コードの再利用性が高まる", "実行速度が遅くなる", "変数を無制限にグローバル定義できる", "HTMLファイルがなくても動く"],
+    "コードの再利用性が高まる",
+    "① コードの再利用性が高まる → 正解。モジュール化により保守性・再利用性が向上<br>② 実行速度が遅くなる → 遅くはならない。むしろ最適化される<br>③ 変数を無制限にグローバル定義できる → グローバル定義を避けるためにモジュール化する<br>④ HTMLファイルがなくても動く → モジュールはHTML経由で読み込まれる場合が多い"
+  ],
+  [
+    "モジュール間で値をやり取りするには？",
+    ["exportとimportを使う", "getとsetを使う", "localStorageで共有する", "postMessageを使う"],
+    "exportとimportを使う",
+    "① exportとimportを使う → 正解。モジュール化ではexport/importで値や関数をやり取りする<br>② getとsetを使う → get/setはオブジェクトのプロパティ制御でモジュール間通信ではない<br>③ localStorageで共有する → localStorageは永続データ用でスコープ外の共有には使わない<br>④ postMessageを使う → postMessageはウィンドウ間通信でモジュールとは関係ない"
+  ]
+]

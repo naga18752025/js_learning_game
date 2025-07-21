@@ -1,0 +1,62 @@
+[
+    [
+    "ブラウザでアラートダイアログを表示する正しい方法は？",
+    ["alert('こんにちは')", "console.alert('こんにちは')", "window.log('こんにちは')", "alertBox('こんにちは')"],
+    "alert('こんにちは')",
+    "① alert('こんにちは') → 正解。alertは組み込みのWeb APIでモーダルダイアログを表示<br>② console.alert('こんにちは') → consoleにalertメソッドはない（console.logはある）<br>③ window.log('こんにちは') → 存在しないメソッド<br>④ alertBox('こんにちは') → alertBoxというAPIは存在しない"
+    ],
+    [
+    "WebページのURLを取得する正しい方法は？",
+    ["window.location.href", "document.URL.get()", "location.getURL()", "navigator.url"],
+    "window.location.href",
+    "① window.location.href → 正解。現在のURLはwindow.location.hrefで取得可能<br>② document.URL.get() → JavaScriptにはそんな書き方はない<br>③ location.getURL() → 存在しないメソッド<br>④ navigator.url → このようなプロパティは存在しない"
+    ],
+    [
+    "ユーザーのブラウザ情報を取得するには？",
+    ["navigator.userAgent", "window.deviceInfo", "document.browser", "location.userAgent"],
+    "navigator.userAgent",
+    "① navigator.userAgent → 正解。navigator.userAgentでブラウザの情報が取得できる<br>② window.deviceInfo → deviceInfo は存在しないプロパティ<br>③ document.browser → documentにbrowserというプロパティはない<br>④ location.userAgent → locationにuserAgentは存在しない"
+    ],
+    [
+    "ボタンクリック時に関数を実行するには？",
+    ["element.addEventListener('click', 関数)", "element.onClick(関数)", "clickEvent.addListener(element, 関数)", "element.trigger('click', 関数)"],
+    "element.addEventListener('click', 関数)",
+    "① element.addEventListener('click', 関数) → 正解。addEventListenerが標準的なイベント登録方法<br>② element.onClick(関数) → onClickは存在せず、onclickならプロパティだが非推奨<br>③ clickEvent.addListener(element, 関数) → clickEvent.addListenerは存在しない構文<br>④ element.trigger('click', 関数) → triggerはjQueryで使われるがネイティブでは存在しない"
+    ],
+    [
+    "フォームの送信をJavaScriptで止めるには？",
+    ["event.preventDefault()", "form.stopSubmit()", "return false outside function", "form.cancel()"],
+    "event.preventDefault()",
+    "① event.preventDefault() → 正解。イベントのデフォルト動作（送信）を阻止する標準メソッド<br>② form.stopSubmit() → stopSubmitは存在しない<br>③ return false outside function → return false は場合によって有効だが一般的でない<br>④ form.cancel() → cancelというメソッドはformには存在しない"
+    ],
+    [
+    "ローカルストレージに値を保存するには？",
+    ["localStorage.setItem('key', 'value')", "storage.put('key', 'value')", "window.local.save()", "document.setStorage()"],
+    "localStorage.setItem('key', 'value')",
+    "① localStorage.setItem('key', 'value') → 正解。localStorageのsetItemでキーと値を保存する<br>② storage.put('key', 'value') → storage.putは存在しないAPI<br>③ window.local.save() → window.local.save も存在しない<br>④ document.setStorage() → document.setStorageも存在しない"
+    ],
+    [
+    "setTimeoutの用途として正しいのは？",
+    ["一定時間後に処理を実行する", "永遠にループ処理をする", "イベントを監視する", "フォーム送信を防ぐ"],
+    "一定時間後に処理を実行する",
+    "① 一定時間後に処理を実行する → 正解。setTimeoutは一度だけ一定時間後に処理を実行<br>② 永遠にループ処理をする → 永遠のループには使えない（使うならsetInterval）<br>③ イベントを監視する → イベント監視はaddEventListenerが使われる<br>④ フォーム送信を防ぐ → preventDefaultで行う処理であり無関係"
+    ],
+    [
+    "fetch APIの特徴として正しいものは？",
+    ["非同期通信をPromiseで扱える", "必ず同期通信になる", "XML専用のAPIである", "Node.js専用の関数である"],
+    "非同期通信をPromiseで扱える",
+    "① 非同期通信をPromiseで扱える → 正解。fetchは非同期通信をPromiseベースで処理できる<br>② 必ず同期通信になる → fetchは非同期が基本<br>③ XML専用のAPIである → fetchはJSONも扱える汎用的なAPI<br>④ Node.js専用の関数である → Node.jsにも実装されているが、ブラウザAPIでもある"
+    ],
+    [
+    "confirm関数の戻り値は？",
+    ["true または false", "文字列", "undefined", "常に true"],
+    "true または false",
+    "① true または false → 正解。ユーザーがOKならtrue、キャンセルならfalseを返す<br>② 文字列 → confirmは文字列ではなく真偽値を返す<br>③ undefined → undefinedではない<br>④ 常に true → ユーザーの操作によって変わるので常にtrueではない"
+    ],
+    [
+    "DOMContentLoaded イベントはいつ発火する？",
+    ["HTMLの解析が完了したとき", "画像などすべてのリソースが読み込まれたとき", "ユーザーが初めてクリックしたとき", "JavaScriptの実行が終わったとき"],
+    "HTMLの解析が完了したとき",
+    "① HTMLの解析が完了したとき → 正解。DOMが構築されたタイミングで発火<br>② 画像などすべてのリソースが読み込まれたとき → すべてのリソース読み込みはloadイベント<br>③ ユーザーが初めてクリックしたとき → ユーザー操作には無関係<br>④ JavaScriptの実行が終わったとき → JSの実行完了とも別タイミング"
+    ]
+]

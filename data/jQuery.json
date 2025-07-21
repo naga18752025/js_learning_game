@@ -1,0 +1,62 @@
+[
+  [
+    "jQueryでHTML要素を取得する正しい書き方は？",
+    ["$('#id')", "$.getElementById('id')", "document.$('#id')", "$('id')"],
+    "$('#id')",
+    "① $('#id') → 正解。jQueryではセレクタをCSSのように書く<br>② $.getElementById('id') → jQueryにgetElementByIdは存在しない<br>③ document.$('#id') → jQueryはdocumentとは別オブジェクトで動作する<br>④ $('id') → $('id')はid属性として解釈されない（#が必要）"
+  ],
+  [
+    "jQueryでクリックイベントを登録する方法は？",
+    ["$('#btn').click(function() { ... })", "$click('#btn', function() { ... })", "$('#btn').onClick(function() { ... })", "$('#btn').trigger('click', function() { ... })"],
+    "$('#btn').click(function() { ... })",
+    "① $('#btn').click(function() { ... }) → 正解。clickメソッドでイベントを登録する基本形<br>② $click('#btn', function() { ... }) → そのような関数は存在しない<br>③ $('#btn').onClick(function() { ... }) → onClickはReactなどで使われるが、jQueryでは無効<br>④ $('#btn').trigger('click', function() { ... }) → triggerはイベントを発火させるもので、登録には使えない"
+  ],
+  [
+    "jQueryで非同期通信（AJAX）を行うメソッドは？",
+    ["$.ajax()", "$.send()", "$.connect()", "$.fetch()"],
+    "$.ajax()",
+    "① $.ajax() → 正解。jQueryでAJAX通信を行う代表的なメソッド<br>② $.send() → sendはjQueryには存在しない<br>③ $.connect() → connectはAjax通信のための関数ではない<br>④ $.fetch() → fetchはネイティブJSのAPIであり、jQueryでは使わない"
+  ],
+  [
+    "次のうち、DOMの読み込み完了時に処理を実行する正しい方法は？",
+    ["$(document).ready(function() { ... })", "window.onload = function() { ... }", "$(function() { ... })", "document.onload(function() { ... })"],
+    "$(document).ready(function() { ... })",
+    "① $(document).ready(function() { ... }) → 正解。jQueryの標準的な初期化方法<br>② window.onload = function() { ... } → 正常だがjQueryではなくネイティブJSの書き方<br>③ $(function() { ... }) → 省略形だが正しい。だが今回は①の方が明示的で優先<br>④ document.onload(function() { ... }) → jQueryではdocument.onloadは使えない"
+  ],
+  [
+    "jQueryでクラスを追加するメソッドは？",
+    ["addClass", "appendClass", "setClass", "classAdd"],
+    "addClass",
+    "① addClass → 正解。要素にクラスを追加するメソッド<br>② appendClass → appendClassは存在しない<br>③ setClass → setClassというAPIは存在しない（それっぽいが間違い）<br>④ classAdd → classAddもメソッドとしては無効"
+  ],
+  [
+    "jQueryで特定の要素を非表示にする方法は？",
+    ["$('#item').hide()", "$('#item').invisible()", "$('#item').display('none')", "$('#item').css('visible', 'hidden')"],
+    "$('#item').hide()",
+    "① $('#item').hide() → 正解。jQueryで要素を非表示にする標準メソッド<br>② $('#item').invisible() → invisible()は存在しないメソッド<br>③ $('#item').display('none') → displayはCSSプロパティで、css()経由で設定する必要あり<br>④ $('#item').css('visible', 'hidden') → 'visible'プロパティはCSSに存在しない（visibilityが正しい）"
+  ],
+  [
+    "jQueryでアニメーションを行う関数はどれ？",
+    ["fadeIn()", "move()", "showUp()", "animateCss()"],
+    "fadeIn()",
+    "① fadeIn() → 正解。jQueryの標準的なアニメーションメソッドの1つ<br>② move() → move()は存在しない<br>③ showUp() → showUp()もjQueryにはない関数<br>④ animateCss() → animateCss()はjQueryのプラグインか他ライブラリの可能性あり"
+  ],
+  [
+    "jQueryのチェーンメソッドの特徴として正しいのは？",
+    ["複数の操作を連続で書ける", "関数定義の順序を無視できる", "変数を省略して記述できる", "複数のファイルを同時に実行できる"],
+    "複数の操作を連続で書ける",
+    "① 複数の操作を連続で書ける → 正解。jQueryのメソッドは戻り値に自身を返すことでチェーン可能<br>② 関数定義の順序を無視できる → 順序は重要。無視できない<br>③ 変数を省略して記述できる → 変数の省略はjQueryとは関係ない仕様<br>④ 複数のファイルを同時に実行できる → ファイルの同時実行はjQueryの機能ではない"
+  ],
+  [
+    "jQueryでクラス名が\"box\"の要素を選択する正しい構文は？",
+    ["$('#box')", "$('.box')", "$('box')", "$('div.box')"],
+    "$('.box')",
+    "① $('.box') → 正解。クラス名が\\\"box\\\"の要素を選択するには$('.box')<br>② $('#box') → idセレクタなので、id=\\\"box\\\"にマッチする<br>③ $('box') → 無効なセレクタ。タグ名やセレクタ名が必要<br>④ $('div.box') → divタグかつboxクラスの要素を選択するので条件が異なる"
+  ],
+  [
+    "jQueryを使う前に必要な準備は？",
+    ["jQueryライブラリの読み込み", "HTMLファイルの拡張子を .jq にする", "JavaScriptをアンインストールする", "CSSを無効にする"],
+    "jQueryライブラリの読み込み",
+    "① jQueryライブラリの読み込み → 正解。CDNやローカルでjQuery本体を読み込む必要がある<br>② HTMLファイルの拡張子を .jq にする → .jq は拡張子として存在しない<br>③ JavaScriptをアンインストールする → jQueryはJavaScriptのライブラリなのでJSが必要<br>④ CSSを無効にする → CSSは関係なく、jQueryの利用には無関係"
+  ]
+]

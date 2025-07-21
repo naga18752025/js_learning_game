@@ -1,0 +1,62 @@
+[
+  [
+    "JavaScriptで数値に変換される文字列はどれ？",
+    ["\"abc\"", "\"3.14\"", "\"true\"", "\"false\""],
+    "\"3.14\"",
+    "① \"3.14\" → 正解。 Number(\"3.14\") で 3.14 に変換される<br>② \"abc\" → 数値に変換しようとするとNaNになる<br>③ \"true\" → 数値変換するとNaNになる（true は真偽値でないとダメ）<br>④ \"false\" → 同じく NaN"
+  ],
+  [
+    "次のうち、暗黙の型変換でfalseと評価される値は？",
+    ["1", "\"hello\"", "null", "[]"],
+    "null",
+    "① null → 正解。null は falsy（falseとして扱われる）<br>② \"hello\" → 空でない文字列はtruthy<br>③ 1 → truthy（trueとして扱われる）<br>④ [] → 空配列はtruthy"
+  ],
+  [
+    "Boolean(\"false\")の値は？",
+    ["true", "false", "null", "undefined"],
+    "true",
+    "① true → 正解。文字列 \"false\" は空でないのでtruthy<br>② false → 実際のBoolean falseとは異なる<br>③ null → Booleanはnullを返さない<br>④ undefined → undefinedも返されない"
+  ],
+  [
+    "\"5\" + 3 の結果は？",
+    ["53", "8", "エラーになる", "NaN"],
+    "53",
+    "① 53 → 正解。文字列 + 数値 → 文字列結合になる<br>② 8 → 足し算ではなく文字列結合になる<br>③ エラーになる → エラーは出ない。暗黙の型変換が行われる<br>④ NaN → 数値として扱わないのでNaNではない"
+  ],
+  [
+    "\"5\" - 2 の結果は？",
+    ["3", "52", "エラーになる", "NaN"],
+    "3",
+    "① 3 → 正解。文字列が数値に暗黙変換され、引き算される<br>② 52 → 足し算ではないので文字列連結は起こらない<br>③ エラーになる → 演算子は有効なのでエラーにはならない<br>④ NaN → 数値として解釈できるためNaNではない"
+  ],
+  [
+    "null == undefined の結果は？",
+    ["true", "false", "エラーになる", "NaN"],
+    "true",
+    "① true → 正解。==では等しいとみなされる<br>② false → 厳密等価（===）ではfalseになるが、==ではtrue<br>③ エラーになる → 比較は可能なのでエラーにはならない<br>④ NaN → NaNではなく、比較の結果は真偽値"
+  ],
+  [
+    "NaN === NaN の結果は？",
+    ["false", "true", "NaN", "undefined"],
+    "false",
+    "① false → 正解。NaNは自分自身とも等しくない<br>② true → JavaScriptではNaN === NaN は false<br>③ NaN → 結果がNaNになるのではなくfalseになる<br>④ undefined → undefinedは関係ない"
+  ],
+  [
+    "次のうち、truthyな値はどれ？",
+    ["0", "\"\"", "{}", "null"],
+    "{}",
+    "① {} → 正解。空のオブジェクトはtruthy<br>② \"\" → 空文字列もfalsy<br>③ 0 → falsy（数値ゼロはfalseとみなされる）<br>④ null → falsyな値"
+  ],
+  [
+    "Number(undefined) の結果は？",
+    ["NaN", "0", "undefined", "エラーになる"],
+    "NaN",
+    "① NaN → 正解。undefinedは数値に変換するとNaNになる<br>② 0 → nullなら0になるがundefinedは異なる<br>③ undefined → Number() は数値を返すので undefined ではない<br>④ エラーになる → エラーにはならない。NaNが返る"
+  ],
+  [
+    "!!\"\" の結果は？",
+    ["false", "true", "null", "エラーになる"],
+    "false",
+    "① false → 正解。空文字はfalsy、!!でBooleanに変換される<br>② true → truthyではないのでtrueにはならない<br>③ null → nullとは別概念<br>④ エラーになる → !!演算子は有効でエラーにはならない"
+  ]
+]

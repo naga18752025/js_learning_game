@@ -1,0 +1,62 @@
+[
+  [
+    "Promiseとは何を表すオブジェクト？",
+    ["非同期処理の結果", "同期処理の結果", "HTML要素の参照", "Javaのクラス"],
+    "非同期処理の結果",
+    "① 非同期処理の結果 → 正解。Promiseは非同期処理の完了や失敗を表すオブジェクト<br>② 同期処理の結果 → 同期処理ではPromiseは不要<br>③ HTML要素の参照 → HTML要素にはDOM参照を使う<br>④ Javaのクラス → Javaとは無関係"
+  ],
+  [
+    "Promiseの状態で存在しないものは？",
+    ["pending", "resolved", "fulfilled", "rejected"],
+    "resolved",
+    "① resolved → 正解。resolvedという状態は存在しない（fulfilledと混同注意）<br>② pending → 未解決の状態で存在する <br>③ fulfilled → 処理成功の状態<br>④ rejected → 処理失敗の状態"
+  ],
+  [
+    "非同期関数にするためのキーワードは？",
+    ["async", "await", "defer", "promise"],
+    "async",
+    "① async → 正解。関数を非同期として定義するキーワード<br>② await → awaitはasync関数内で使う補助的構文<br>③ defer → deferはscriptタグ属性で使用する<br>④ promise → Promiseはクラスであり、キーワードではない"
+  ],
+  [
+    "awaitはどこで使うのが正しい？",
+    ["async関数の中", "普通の関数の中", "if文の外", "ループの外"],
+    "async関数の中",
+    "① async関数の中 → 正解。awaitはasync関数内でしか使用できない<br>② 普通の関数の中 → 通常関数で使うと構文エラー<br>③ if文の外 → if文との関係はなく、関数スコープが重要<br>④ ループの外 → ループの外も可能だが、async内でなければならない"
+  ],
+  [
+    "次のうち、非同期処理の記述方法でないものは？",
+    ["Promise", "async/await", "setTimeout", "for文"],
+    "for文",
+    "① for文 → 正解。for文は単なる繰り返し構文で非同期とは関係ない<br>② async/await → Promiseを簡潔に書く方法<br>③ setTimeout → 非同期処理の一種<br>④ Promise → 非同期制御の基本"
+  ],
+  [
+    "Promiseチェーンでthenのあとにcatchを書く理由は？",
+    ["エラー処理のため", "thenの後に関数を閉じるため", "実行を停止するため", "ループを作るため"],
+    "エラー処理のため",
+    "① エラー処理のため → 正解。catchはPromiseの失敗（例外）を捕まえる<br>② thenの後に関数を閉じるため → thenの後に閉じる必要はない<br>③ 実行を停止するため → 実行停止には使えない<br>④ ループを作るため → ループには関係ない構文"
+  ],
+  [
+    "setTimeoutの第一引数には何を渡す？",
+    ["関数", "時間", "変数名", "URL"],
+    "関数",
+    "① 関数 → 正解。コールバック関数を渡す<br>② 時間 → 時間は第二引数（ミリ秒）<br>③ 変数名 → 変数名だけでは実行できない<br>④ URL → URLは使わない"
+  ],
+  [
+    "次のうち、非同期API通信に使われる関数は？",
+    ["fetch", "console.log", "Math.random", "parseInt"],
+    "fetch",
+    "① fetch → 正解。fetchはHTTPリクエストを非同期に送信する<br>② console.log → console.logは出力のみで通信しない<br>③ Math.random → Math.randomは乱数生成<br>④ parseInt → parseIntは文字列を数値に変換する"
+  ],
+  [
+    "async/await構文で例外処理を行う方法は？",
+    ["try...catch", "if文", "setTimeout", "finallyのみ"],
+    "try...catch",
+    "① try...catch → 正解。awaitのエラーはtry...catchで補足する<br>② if文 → if文は条件分岐で、例外処理ではない<br>③ setTimeout → setTimeoutは無関係<br>④ finallyのみ → finallyは補助的に使えるが、例外処理の主目的ではない"
+  ],
+  [
+    "次のうち、非同期関数の戻り値として正しいのは？",
+    ["Promise", "undefined", "number", "null"],
+    "Promise",
+    "① Promise → 正解。async関数は常にPromiseを返す<br>② undefined → undefinedにはならない（戻り値がない場合もPromiseで返される）<br>③ number → numberは中の値であって、戻り値の型ではない<br>④ null → nullも戻り値として返すことはあるが、ラップされたPromiseとして"
+  ]
+]

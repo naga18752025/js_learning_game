@@ -1,62 +1,67 @@
 [
   [
-    "HTMLのボタンをクリックしたときに関数を実行させる正しい方法は？",
-    ["addEventListenerを使う", "onclick属性に関数を書く", "どちらでも可能", "できない"],
-    "どちらでも可能",
-    "① addEventListener → OK。イベントを後から追加可能<br>② onclick属性 → OK。HTML側に直接書ける<br>③ どちらでも可能 → 正解<br>④ できない → 間違い"
+    "HTMLのボタンをクリックしたときに関数を実行させる適切な方法は？",
+    [
+        "addEventListenerを使ってイベントを登録する",
+        "setIntervalで定期的に関数を呼ぶ",
+        "document.writeで関数を書く",
+        "console.logで関数を表示する"
+    ],
+    "addEventListenerを使ってイベントを登録する",
+    "① addEventListenerを使ってイベントを登録する → 正解。イベント駆動の基本的な方法<br>② setIntervalで定期的に関数を呼ぶ → タイマーであってユーザーのクリックとは無関係<br>③ document.writeで関数を書く → HTML出力には使えるが、イベント登録とは関係ない<br>④ console.logで関数を表示する → 表示するだけで実行されない"
   ],
   [
-    "HTML要素のテキストを取得するにはどのプロパティを使う？",
-    ["textContent", "innerHTML", "value", "text"],
-    "textContent",
-    "① textContent → 正解。テキストだけを扱える<br>② innerHTML → HTMLタグも含む<br>③ value → フォーム用。例：input要素<br>④ text → 存在しないプロパティ"
+    "DOMから要素を取得する際に、最初に一致した一つの要素だけを取得するには？",
+    ["document.querySelector()", "document.querySelectorAll()", "document.getElementsByClassName()", "document.getElementById()"],
+    "document.querySelector()",
+    "① document.querySelector() → 正解。セレクタに一致する最初の要素を取得する<br>② document.querySelectorAll() → 一致するすべての要素を取得する<br>③ document.getElementsByClassName() → 指定クラスの全要素をHTMLCollectionで取得<br>④ document.getElementById() → ID指定だが、セレクタではない"
   ],
   [
-    "inputタグに入力された値を取得するには？",
-    ["input.value", "input.textContent", "input.innerHTML", "getAttribute('value')"],
-    "input.value",
-    "① input.value → 正解。フォーム要素の値取得<br>② textContent → inputには使えない<br>③ innerHTML → フォーム要素には無効<br>④ getAttribute → 初期値なら取れるが変更後は取れない"
+    "input要素の現在の値を取得する正しい方法は？",
+    ["element.value", "element.textContent", "element.innerHTML", "element.getAttribute('value')"],
+    "element.value",
+    "① element.value → 正解。inputやtextareaなどの入力値を取得できる<br>② element.textContent → テキストノードの内容取得。フォーム値には使えない<br>③ element.innerHTML → HTML構造を取得。フォームの入力とは無関係<br>④ element.getAttribute('value') → 初期値は取れるが、ユーザーが入力後の値は取得できない"
   ],
   [
-    "要素のCSSクラスを追加するには？",
-    ["element.classList.add()", "element.addClass()", "element.className()", "element.style.class()"],
-    "element.classList.add()",
-    "① classList.add → 正解。クラスを安全に追加<br>② addClass → jQueryの書き方<br>③ className() → 関数ではない<br>④ style.class → 存在しない"
-  ],
-  [
-    "HTMLのdiv要素をJavaScriptで作成するには？",
-    ["document.createElement('div')", "new Div()", "makeDiv()", "document.getElement('div')"],
+    "新しいdiv要素をJavaScriptで作成するには？",
+    ["document.createElement('div')", "new Div()", "document.makeElement('div')", "document.getElement('div')"],
     "document.createElement('div')",
-    "① createElement → 正解。新しいDOM要素を作成<br>② new Div() → 存在しないクラス<br>③ makeDiv → ユーザー定義ならOKだが標準ではない<br>④ getElement → 存在しないメソッド"
+    "① document.createElement('div') → 正解。新規の要素を作成<br>② new Div() → JavaScriptにはDivというクラスは存在しない<br>③ document.makeElement('div') → 存在しないメソッド<br>④ document.getElement('div') → 正しくは getElementById など"
   ],
   [
-    "要素を親要素に追加するには？",
-    ["parent.appendChild(child)", "child.appendTo(parent)", "parent.add(child)", "parent.insert(child)"],
+    "要素を他の要素の子として追加する正しい方法は？",
+    ["parent.appendChild(child)", "child.addTo(parent)", "parent.insert(child)", "parent.attachChild(child)"],
     "parent.appendChild(child)",
-    "① appendChild → 正解。子として末尾に追加<br>② appendTo → jQueryの書き方<br>③ add/insert → DOM標準にはない"
+    "① parent.appendChild(child) → 正解。DOMツリーに子要素を追加する標準的な方法<br>② child.addTo(parent) → 存在しない<br>③ parent.insert(child) → DOMにはこのようなメソッドはない<br>④ parent.attachChild(child) → 非標準で存在しない"
   ],
   [
-    "ある要素のIDを変更したいときに使うのは？",
-    ["element.id = 'newId'", "element.setID('newId')", "element.changeId('newId')", "element.updateId = 'newId'"],
-    "element.id = 'newId'",
-    "① element.id = 'newId' → 正解。プロパティを書き換えるだけ<br>② setID → 存在しない<br>③ changeId → 存在しない<br>④ updateId → 存在しない"
+    "すでにある要素の内容をすべてHTML構造ごと書き換えたい場合に使うプロパティは？",
+    ["innerHTML", "textContent", "outerHTML", "value"],
+    "innerHTML",
+    "① innerHTML → 正解。タグも含めて中身を書き換えできる<br>② textContent → テキストだけを書き換える<br>③ outerHTML → 要素自身も含めて上書きする<br>④ value → inputなどの値であり、内容全体の変更には使わない"
   ],
   [
-    "classList.remove('active') の効果は？",
-    ["指定のクラスを取り除く", "全クラスを削除", "CSSファイルを消す", "要素を削除する"],
-    "指定のクラスを取り除く",
-    "① 指定のクラスを取り除く → 正解。classListで管理できる<br>② 全クラス削除 → className = \"\" などを使う<br>③ CSS削除 → 無関係<br>④ 要素削除 → remove()を使う"
+    "複数のクラス名をJavaScriptで追加するには？",
+    ["element.classList.add('a', 'b')", "element.className += ' a b'", "element.addClass('a b')", "element.setClass('a', 'b')"],
+    "element.classList.add('a', 'b')",
+    "① element.classList.add('a', 'b') → 正解。複数のクラス名を一度に追加できる<br>② element.className += ' a b' += → 動作するが空白ミスなどでバグを生む可能性あり<br>③ element.addClass('a b') → jQueryの書き方。JavaScriptでは使えない<br>④ element.setClass('a', 'b') → 存在しないメソッド"
   ],
   [
-    "querySelectorAll('button') の戻り値の型は？",
-    ["NodeList", "HTMLCollection", "Array", "Element"],
-    "NodeList",
-    "① NodeList → 正解。querySelectorAllの戻り値<br>② HTMLCollection → getElementsBy〜系の戻り値<br>③ Array → 配列ではない（forEach可）<br>④ Element → 複数要素には該当しない"
+    "要素の属性（例えばhrefやsrcなど）を取得するには？",
+    ["element.getAttribute('属性名')", "element.attribute", "element.attributes['属性名']", "element.getProp('属性名')"],
+    "element.getAttribute('属性名')",
+    "① element.getAttribute('属性名') → 正解。任意の属性を取得できる<br>② element.attribute → 存在しないプロパティ<br>③ element.attributes['属性名'] → NamedNodeMapで取得可能だが扱いが複雑<br>④ element.getProp('属性名') → 存在しないメソッド"
   ],
   [
-    "イベントを一度だけ実行させたいときのaddEventListenerのオプションは？",
-    ["{ once: true }", "{ single: true }", "{ oneTime: true }", "オプションは指定できない"],
-    "{ once: true }",
-    "① { once: true } → 正解。一度だけで自動解除<br>② single/oneTime → 存在しない<br>③ 指定できない → 現代のブラウザでは可能"
+    "あるクラスを要素に持っているかどうかを確認するには？",
+    ["element.classList.contains('クラス名')", "element.hasClass('クラス名')", "element.className.includes('クラス名')", "element.classList.has('クラス名')"],
+    "element.classList.contains('クラス名')",
+    "① element.classList.contains('クラス名') → 正解。クラスを持つか判定できる<br>② element.hasClass('クラス名') → jQueryの書き方。JavaScriptには存在しない<br>③ element.className.includes('クラス名') → 文字列として探すだけで安全ではない<br>④ element.classList.has('クラス名') → 存在しないメソッド"
+  ],
+  [
+    "要素を削除するための正しいメソッドは？",
+    ["element.remove()", "element.delete()", "parent.removeChild(element)", "element.removeNode()"],
+    "element.remove()",
+    "① element.remove() → 正解。対象の要素をDOMから削除できる<br>② element.delete() → 配列やオブジェクトのプロパティに使う。DOM要素には使えない<br>③ parent.removeChild(element) → 正しいが、親要素から呼び出す必要がある<br>④ element.removeNode() → 古いIE専用メソッドで標準ではない"
   ]
 ]

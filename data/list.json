@@ -1,0 +1,62 @@
+[
+  [
+    "配列の長さ（要素数）を取得する正しい方法は？",
+    ["array.size", "array.length", "array.count()", "array.getLength()"],
+    "array.length",
+    "① array.length → 正解。lengthで要素数を取得できる<br>② array.size → 存在しないプロパティ<br>③ array.count() → Pythonの書き方で、JSでは無効<br>④ array.getLength() → メソッドとして存在しない"
+  ],
+  [
+    "配列の末尾に要素を追加する正しい方法は？",
+    ["array.push(value)", "array.add(value)", "array.append(value)", "array.insert(value)"],
+    "array.push(value)",
+    "① array.push(value) → 正解。pushは末尾に要素を追加<br>② array.add(value) → 存在しないメソッド<br>③ array.append(value) → Python風で無効<br>④ array.insert(value) → 配列に対しては存在しない"
+  ],
+  [
+    "オブジェクトのプロパティにアクセスする正しい方法は？",
+    ["obj.property", "obj[property]", "obj->property", "obj::property"],
+    "obj.property",
+    "① obj.property → 正解。ドット記法でアクセスできる<br>② obj[property] → [] も可能だが変数のときに使う<br>③ obj->property → -> はC++などの構文<br>④ obj::property → :: はクラススコープ演算子でJSにはない"
+  ],
+  [
+    "オブジェクトのプロパティをループ処理する正しい方法は？",
+    ["for...in", "for...of", "forEach", "map()"],
+    "for...in",
+    "① for...in → 正解。for...inでプロパティを列挙可能<br>② for...of → 配列向けでオブジェクトには使えない<br>③ forEach → オブジェクトでは直接使えない<br>④ map() → 配列専用メソッド"
+  ],
+  [
+    "配列から特定の条件を満たす最初の要素を取得する方法は？",
+    ["array.find()", "array.filter()", "array.indexOf()", "array.search()"],
+    "array.find()",
+    "① array.find() → 正解。findは条件に合う最初の要素を返す<br>② array.filter() → filterは全ての一致要素を返す<br>③ array.indexOf() → indexOfはインデックスを返すが条件関数は使えない<br>④ array.search() → search() は存在しない"
+  ],
+  [
+    "オブジェクトにプロパティを追加する正しい方法は？",
+    ["obj.newProp = value", "obj.add('newProp', value)", "obj.insert(value)", "obj.push('newProp')"],
+    "obj.newProp = value",
+    "① obj.newProp = value → 正解。ドット記法でプロパティを追加可能<br>② obj.add('newProp', value) → addは存在しない関数<br>③ obj.insert(value) → insertは無効。配列向けの印象があるが存在しない<br>④ obj.push('newProp') → pushは配列専用"
+  ],
+  [
+    "配列のすべての要素に対して関数を実行したいときのメソッドは？",
+    ["forEach()", "map()", "apply()", "each()"],
+    "forEach()",
+    "① forEach() → 正解。各要素に対して副作用のある処理を行う<br>② map() → mapは新しい配列を返すので用途が異なる<br>③ apply() → applyは関数に引数を渡すためのメソッド<br>④ each() → eachはjQueryのメソッドで、JS標準にはない"
+  ],
+  [
+    "オブジェクトのプロパティ名一覧を配列で取得する方法は？",
+    ["Object.keys(obj)", "obj.getKeys()", "obj.keys()", "Object.getProperties(obj)"],
+    "Object.keys(obj)",
+    "① Object.keys(obj) → 正解。プロパティ名を配列で取得できる<br>② obj.getKeys() → getKeysは存在しない<br>③ obj.keys() → keys() はオブジェクトには存在しない<br>④ bject.getProperties(obj) → getProperties() も存在しない"
+  ],
+  [
+    "配列の特定位置の要素を削除するには？",
+    ["array.splice(index, 1)", "array.remove(index)", "array.delete(index)", "array.cut(index)"],
+    "array.splice(index, 1)",
+    "① array.splice(index, 1) → 正解。spliceで任意位置の要素を削除可能<br>② array.remove(index) → removeはJS配列には存在しない<br>③ array.delete(index) → deleteは使えるがundefinedが残るので非推奨<br>④ array.cut(index) → cutは存在しない"
+  ],
+  [
+    "オブジェクトのプロパティが存在するか確認するには？",
+    ["'key' in obj", "obj.hasKey('key')", "obj.keyExists('key')", "obj.contains('key')"],
+    "'key' in obj",
+    "① 'key' in obj → 正解。in演算子で存在確認が可能<br>② obj.hasKey('key') → hasKeyは存在しない<br>③ obj.keyExists('key') → keyExistsも存在しない<br>④ obj.contains('key') → containsは配列向けでオブジェクトには使えない"
+  ]
+]

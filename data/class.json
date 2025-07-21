@@ -1,0 +1,62 @@
+[
+  [
+    "クラスを定義する正しい構文は？",
+    ["class Animal {}", "function class Animal {}", "class = Animal {}", "create class Animal {}"],
+    "class Animal {}",
+    "① class Animal {} → 正解。ES6で導入されたクラス定義の基本構文<br>② function class Animal {} → functionとclassの混合は構文エラー<br>③ class = Animal {} → classに=は使わない<br>④ create class Animal {} → create class は存在しない構文"
+  ],
+  [
+    "クラスからインスタンスを生成する正しい方法は？",
+    ["new Animal()", "Animal.new()", "create Animal()", "Animal()"],
+    "new Animal()",
+    "① new Animal() → 正解。インスタンスはnewキーワードで生成する<br>② Animal.new() → Java風の構文でJSでは使えない<br>③ create Animal() → createはJSに存在しないキーワード<br>④ Animal() → クラスを関数のように直接呼ぶとエラーになる"
+  ],
+  [
+    "クラスにメソッドを定義する正しい方法は？",
+    ["class A { greet() { return 'hi'; } }", "class A { function greet() { return 'hi'; } }", "class A { greet = function() { return 'hi'; } }", "class A { const greet() = 'hi'; }"],
+    "class A { greet() { return 'hi'; } }",
+    "① class A { greet() { return 'hi'; } } → 正解。クラス内ではfunctionキーワードなしでメソッドを定義する<br>② class A { function greet() { return 'hi'; } } → functionキーワードは不要<br>③ class A { greet = function() { return 'hi'; } } → = function はオブジェクトでは使えるがクラスのメソッドとしては不適切<br>④ class A { const greet() = 'hi'; } → constを使ったメソッド定義は構文エラー"
+  ],
+  [
+    "コンストラクタ（constructor）の役割は？",
+    ["インスタンス生成時に初期化を行う", "メモリ解放を行う", "イベント処理を登録する", "クラスの継承を定義する"],
+    "インスタンス生成時に初期化を行う",
+    "① インスタンス生成時に初期化を行う → 正解。constructorはインスタンス生成時に自動で呼ばれる<br>② メモリ解放を行う → メモリ解放はGCが行い、constructorではない<br>③ イベント処理を登録する → イベント登録は別処理<br>④ クラスの継承を定義する → 継承はextendsを使って定義する"
+  ],
+  [
+    "継承を行う正しい構文は？",
+    ["class Dog extends Animal {}", "class Dog inherit Animal {}", "class Dog : Animal {}", "class Dog with Animal {}"],
+    "class Dog extends Animal {}",
+    "① class Dog extends Animal {} → 正解。extendsを使って親クラスを継承する<br>② class Dog inherit Animal {} → inheritはPythonなど他言語のキーワード<br>③ class Dog : Animal {} → : はC++やJavaなどの構文<br>④ class Dog with Animal {} → with構文はJSには存在しない"
+  ],
+  [
+    "親クラスのコンストラクタを呼ぶ正しい方法は？",
+    ["super()", "this()", "base()", "parent()"],
+    "super()",
+    "① super() → 正解。親クラスのconstructorを呼び出すにはsuper()<br>② this() → this()は自分自身の関数呼び出しで誤用<br>③ base() → base()はC#などの言語構文<br>④ parent() → parent()はPHPなどの構文でJSにはない"
+  ],
+  [
+    "インスタンスのプロパティにアクセスする方法は？",
+    ["instance.property", "property.instance", "get(instance.property)", "access property of instance"],
+    "instance.property",
+    "① instance.property → 正解。ドット記法でプロパティにアクセスできる<br>② property.instance → 順序が逆で無効な構文<br>③ get(instance.property) → getはメソッドではなく文法として使わない<br>④ access property of instance → 文として正しいが構文ではない"
+  ],
+  [
+    "メソッドをオーバーライドするとは？",
+    ["親クラスのメソッドを子クラスで上書きすること", "関数を2回定義すること", "メソッドの引数を省略すること", "複数のクラスに同じ関数をコピーすること"],
+    "親クラスのメソッドを子クラスで上書きすること",
+    "① 親クラスのメソッドを子クラスで上書きすること → 正解。オーバーライドとは親の処理を子で変更すること<br>② 関数を2回定義すること → 同名の関数定義はエラーになる可能性がある<br>③ メソッドの引数を省略すること → 引数の省略はオーバーロードとは別概念<br>④ 複数のクラスに同じ関数をコピーすること → コピーはオーバーライドではない"
+  ],
+  [
+    "getterを定義する目的は？",
+    ["プロパティ取得時に処理を追加するため", "関数を定義するため", "プロパティを削除するため", "メモリを確保するため"],
+    "プロパティ取得時に処理を追加するため",
+    "① プロパティ取得時に処理を追加するため → 正解。getterはプロパティ取得時に動作する関数<br>② 関数を定義するため → 関数定義とは異なる用途<br>③ プロパティを削除するため → 削除はdelete演算子などで行う<br>④ メモリを確保するため → メモリ確保には関係しない"
+  ],
+  [
+    "オブジェクトリテラルでメソッドを定義する正しい構文は？",
+    ["const obj = { greet() { return 'hi'; } };", "const obj = { greet: => 'hi' };", "const obj = { greet: -> 'hi' };", "const obj = { function greet() { return 'hi'; } };"],
+    "const obj = { greet() { return 'hi'; } };",
+    "① const obj = { greet() { return 'hi'; } }; → 正解。ES6以降、短縮メソッド構文が使える<br>② const obj = { greet: => 'hi' }; → => は関数式には使えるがこの構文は誤り<br>③ const obj = { greet: -> 'hi' }; → -> はJavaScriptに存在しない構文<br>④ const obj = { function greet() { return 'hi'; } }; → オブジェクトリテラル内でfunctionキーワードは使わない"
+  ]
+]
