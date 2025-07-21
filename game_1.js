@@ -23,6 +23,7 @@ function darkTheme(){
         });
         document.getElementById("not-correct-board").style.color = "white";
         document.getElementById("mondaibun").style.color = "white";
+        document.getElementById("commentary").style.backgroundColor = "rgb(151, 151, 151)";
     }
 }
 
