@@ -46,6 +46,7 @@ html, body{
     border: solid 0.5vh black;
     border-radius: 10px;
     overflow: hidden;
+    overscroll-behavior: contain;
 }
 
 button{
@@ -130,6 +131,10 @@ button{
     padding-bottom: 1vh;
     overflow: auto; 
     background-color: rgb(255, 255, 255);
+    overscroll-behavior: contain; /* スクロールが親に伝播しない */
+    touch-action: auto; /* モバイル対策 */
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
 }
 
 #learning-log{
@@ -144,6 +149,10 @@ button{
     padding-bottom: 1vh;
     overflow: auto; 
     background-color: rgb(255, 255, 255);
+    overscroll-behavior: contain; /* スクロールが親に伝播しない */
+    touch-action: auto; /* モバイル対策 */
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
 }
 
 #learning-log div{
