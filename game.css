@@ -34,12 +34,12 @@ html, body{
 }
 
 
-#count-and-quit{
+#top-part{
     margin:0;
     padding:0;
-    position: absolute;
-    bottom:90%;
-    width:80%;
+    margin-bottom: 0.4vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -48,6 +48,7 @@ html, body{
     margin:0;
     padding:0;
     justify-self: left;
+    margin-right: auto;
     color: black;
     font-size: 1.7vh;
     font-family: "M PLUS Rounded 1c", sans-serif;
@@ -55,10 +56,10 @@ html, body{
 
 #quit-button{
     margin:0;
-    padding:2px;
+    padding:0.2vh;
     background-color: rgb(241, 173, 99);
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5vh;
     justify-self: right;
     color: black;
     font-size: 1.7vh;
@@ -75,13 +76,25 @@ img{
     will-change: opacity, transform;
 }
 
-#border{
+#main{
     margin:0;
     padding:0;
     position: absolute;
     bottom:50%;
     width:80%;
     max-height: 40%;
+    display: flex;               /* 横並び制御 */
+    justify-content: center;     /* 横方向中央揃え */
+    align-items: center;         /* 縦方向揃え（任意） */
+    flex-direction: column;
+    background: none;
+}
+
+#border{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
     border-top: solid 0.5vh black;
     border-bottom: solid 0.5vh black;
     display: flex;               /* 横並び制御 */
