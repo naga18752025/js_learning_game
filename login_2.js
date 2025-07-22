@@ -52,6 +52,11 @@ function signUpCheck(){
     if(!clickPermission){
         return;
     }
+    const checkbox = document.getElementById('agree');
+    if (!checkbox.checked) {
+        alert('利用規約およびプライバシーポリシーに同意してください');
+        return;
+    }
     const email = document.getElementById("email2").value;
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!pattern.test(email)) {
