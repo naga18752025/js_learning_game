@@ -321,7 +321,7 @@ button{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 60vh;
 }
 
 #mistake-check-modal-close, #mistake-check-modal-close2{

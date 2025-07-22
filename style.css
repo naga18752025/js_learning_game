@@ -479,7 +479,7 @@ hr{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 60vh;
 }
 
 #mistake-check-modal-close3, #mistake-check-modal-close2{
