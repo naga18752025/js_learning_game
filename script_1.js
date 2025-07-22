@@ -131,21 +131,21 @@ function numberOfQuestions(){
     window.location.reload();
 }
 
-const modal2 = document.getElementById("mistake-check-modal2");
-const modal3 = document.getElementById("mistake-check-modal3");
+const policy = document.getElementById("policy-modal");
+const kiyaku = document.getElementById("kiyaku-modal");
 
 function policyOpen(){
-    modal2.classList.add("is-active");
+    policy.classList.add("is-active");
 }
 
 function policyClose(){
-    modal2.classList.remove("is-active");
+    policy.classList.remove("is-active");
 }
 
 function kiyakuOpen(){
-    modal3.classList.add("is-active");
+    kiyaku.classList.add("is-active");
 }
 
 function kiyakuClose(){
-    modal3.classList.remove("is-active");
+    kiyaku.classList.remove("is-active");
 }

@@ -431,7 +431,7 @@ hr{
     cursor: pointer;
 }
 
-#mistake-check-modal3, #mistake-check-modal2{
+#policy-modal, #kiyaku-modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -447,7 +447,7 @@ hr{
     z-index: 9998;
 }
 
-#mistake-check-modal3::before, #mistake-check-modal2::before{
+#policy-modal::before, #kiyaku-modal::before{
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -455,12 +455,12 @@ hr{
     margin-left: -0.2em;
 }
 
-#mistake-check-modal3.is-active, #mistake-check-modal2.is-active{
+#policy-modal.is-active, #kiyaku-modal.is-active{
     opacity: 1;
     visibility: visible;
 }
 
-#mistake-check-modal-container3, #mistake-check-modal-container2{
+#policy-modal-container, #kiyaku-modal-container{
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -468,7 +468,7 @@ hr{
     height: auto;
 }
 
-#mistake-check-modal-content3, #mistake-check-modal-content2{
+#policy-modal-content, #kiyaku-modal-content{
     background: #fff;
     text-align: left;
     line-height: 1.8;
@@ -482,7 +482,7 @@ hr{
     height: 60vh;
 }
 
-#mistake-check-modal-close3, #mistake-check-modal-close2{
+#policy-modal-close, #kiyaku-modal-close{
     position: absolute;
     display: flex;
     align-items: center;
