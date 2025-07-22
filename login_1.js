@@ -49,3 +49,22 @@ function back(){
     document.getElementById("loading").style.display = "flex";
     window.location.href = "index.html";
 }
+
+const modal = document.getElementById("mistake-check-modal");
+const modal2 = document.getElementById("mistake-check-modal2");
+
+function policyOpen(){
+    modal.classList.add("is-active");
+}
+
+function policyClose(){
+    modal.classList.remove("is-active");
+}
+
+function kiyakuOpen(){
+    modal2.classList.add("is-active");
+}
+
+function kiyakuClose(){
+    modal2.classList.remove("is-active");
+}
