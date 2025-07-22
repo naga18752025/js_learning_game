@@ -41,6 +41,8 @@ questionAmount();
 function quitGame(){
     if(confirm("本当に中断しますか？")){
         document.getElementById("loading").style.display = "flex";
-        window.location.href = "index.html";
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 500);
     };
 }
