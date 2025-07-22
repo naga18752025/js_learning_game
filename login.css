@@ -273,7 +273,7 @@ button{
     }
 }
 
-#mistake-check-modal, #mistake-check-modal2{
+#policy-modal, #kiyaku-modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -289,7 +289,7 @@ button{
     z-index: 9998;
 }
 
-#mistake-check-modal::before, #mistake-check-modal2::before{
+#policy-modal::before, #kiyaku-modal::before{
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -297,12 +297,12 @@ button{
     margin-left: -0.2em;
 }
 
-#mistake-check-modal.is-active, #mistake-check-modal2.is-active{
+#policy-modal.is-active, #kiyaku-modal.is-active{
     opacity: 1;
     visibility: visible;
 }
 
-#mistake-check-modal-container, #mistake-check-modal-container2{
+#policy-modal-container, #kiyaku-modal-container{
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -310,7 +310,7 @@ button{
     height: auto;
 }
 
-#mistake-check-modal-content, #mistake-check-modal-content2{
+#policy-modal-content, #kiyaku-modal-content{
     background: #fff;
     text-align: left;
     line-height: 1.8;
@@ -324,7 +324,7 @@ button{
     height: 60vh;
 }
 
-#mistake-check-modal-close, #mistake-check-modal-close2{
+#policy-modal-close, #kiyaku-modal-close{
     position: absolute;
     display: flex;
     align-items: center;
