@@ -65,6 +65,7 @@ async function loadTopic(topicName) {
 
 function gameStart(){
     document.getElementById("main").classList.add("vanish");
+    localStorage.setItem("reload", "none");
     setTimeout(() => {
         window.location.href = "game.html";
         document.getElementById("main").style.display = "none";

@@ -1,11 +1,15 @@
 window.downPercent = 10;
 
-function generateMonsterType(){
-    let monsterNumber = Math.floor(Math.random() * 5) + 1;
-    document.querySelector("img").src = "images/monster" + String(monsterNumber) + ".png";
+function reloadcheck(){
+    if(localStorage.getItem("reload") === "done"){
+        alert("不正な操作です");
+        window.location.href = "index.html";
+    }else{
+        localStorage.setItem("reload", "done");
+    }
 }
 
-generateMonsterType();
+reloadcheck();
 
 function CourseExistCheck(){
     if(localStorage.getItem("course") === null){
@@ -15,6 +19,14 @@ function CourseExistCheck(){
 }
 
 CourseExistCheck();
+
+function generateMonsterType(){
+    let monsterNumber = Math.floor(Math.random() * 5) + 1;
+    document.querySelector("img").src = "images/monster" + String(monsterNumber) + ".png";
+}
+
+generateMonsterType();
+
 
 function darkTheme(){
     if(localStorage.getItem("theme-color") === "black"){
