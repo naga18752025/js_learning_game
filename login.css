@@ -287,14 +287,9 @@ button{
     visibility: hidden;
     box-sizing: border-box;
     z-index: 9998;
-}
-
-#mistake-check-modal::before, #mistake-check-modal2::before{
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    margin-left: -0.2em;
+    display: flex;
+    align-items: center;     /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
 }
 
 #mistake-check-modal.is-active, #mistake-check-modal2.is-active{
