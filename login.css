@@ -307,7 +307,7 @@ button{
     display: inline-block;
     vertical-align: middle;
     width: 95%;
-    height: 90vh;
+    height: auto;
 }
 
 #mistake-check-modal-content, #mistake-check-modal-content2{
@@ -321,6 +321,7 @@ button{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    height: 80vh;
 }
 
 #mistake-check-modal-close, #mistake-check-modal-close2{

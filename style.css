@@ -465,7 +465,7 @@ hr{
     display: inline-block;
     vertical-align: middle;
     width: 95%;
-    height: 90vh;
+    height: auto;
 }
 
 #mistake-check-modal-content3, #mistake-check-modal-content2{
@@ -479,6 +479,7 @@ hr{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    height: 80vh;
 }
 
 #mistake-check-modal-close3, #mistake-check-modal-close2{
