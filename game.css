@@ -164,6 +164,7 @@ img{
   }
 
   100% {
+    filter: blur(10px) grayscale(100%);
     opacity:0.0;
     scale: 0.8;
   } 
